@@ -1,0 +1,96 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 16 2025 23:21:22[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0972ch ( 38700) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=00019754 vaddr=3fc8c200 size=013dch (  5084) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001ab38 vaddr=40380000 size=054e0h ( 21728) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18b70h (101232) map[0m
+[0;32mI (127) esp_image: segment 4: paddr=00038b98 vaddr=403854e0 size=06ce0h ( 27872) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003f880 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (137) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (137) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Unicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     fan_idf[0m
+[0;32mI (165) app_init: App version:      1[0m
+[0;32mI (168) app_init: Compile time:     Dec 16 2025 23:21:02[0m
+[0;32mI (173) app_init: ELF file SHA256:  e2ac60690...[0m
+[0;32mI (178) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (181) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (185) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (189) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (193) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (199) heap_init: At 3FC8E500 len 00031B00 (198 KiB): RAM[0m
+[0;32mI (204) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (211) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (217) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (223) spi_flash: detected chip: generic[0m
+[0;32mI (226) spi_flash: flash io: dio[0m
+[0;33mW (229) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (241) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (247) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (254) main_task: Started on CPU0[0m
+[0;32mI (264) main_task: Calling app_main()[0m
+ACD value: 136.507935
+ACD value: 155.921860
+ACD value: 152.991455
+ACD value: 132.356537
+ACD value: 123.748466
+ACD value: 111.904762
+ACD value: 129.548233
+ACD value: 152.014648
+ACD value: 146.031754
+ACD value: 125.885223
+ACD value: 115.079369
+ACD value: 117.216125
+ACD value: 149.389496
+ACD value: 146.092804
+ACD value: 124.664223
+ACD value: 110.256409
+ACD value: 115.934059
+ACD value: 148.168488
+ACD value: 143.467636
+ACD value: 120.818069
+ACD value: 106.227112
+ACD value: 116.239319
+ACD value: 147.313797
+ACD value: 141.208786
+ACD value: 118.681320
+ACD value: 106.349205
+ACD value: 113.736259
+ACD value: 144.078140
+ACD value: 140.109879
+ACD value: 118.131866
+ACD value: 103.113556
+ACD value: 111.050056
+ACD value: 141.575089
+ACD value: 140.537231
+ACD value: 119.780220
+ACD value: 111.233208
+ACD value: 103.235649
+ACD value: 131.562881
+ACD value: 142.612946
+ACD value: 125.518929

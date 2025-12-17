@@ -1,0 +1,92 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 16 2025 23:21:22[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=18d2ch (101676) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=00028d54 vaddr=3fc93e00 size=02cf4h ( 11508) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0002ba50 vaddr=40380000 size=045c8h ( 17864) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=9220ch (598540) map[0m
+[0;32mI (212) esp_image: segment 4: paddr=000c2234 vaddr=403845c8 size=0f6cch ( 63180) load[0m
+[0;32mI (224) esp_image: segment 5: paddr=000d1908 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (230) boot: Disabling RNG early entropy source...[0m
+[0;32mI (241) cpu_start: Unicore app[0m
+[0;32mI (250) cpu_start: Pro cpu start user code[0m
+[0;32mI (250) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (250) app_init: Application information:[0m
+[0;32mI (250) app_init: Project name:     fan_idf[0m
+[0;32mI (254) app_init: App version:      1[0m
+[0;32mI (257) app_init: Compile time:     Dec 16 2025 23:21:02[0m
+[0;32mI (262) app_init: ELF file SHA256:  83b123401...[0m
+[0;32mI (266) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (270) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (274) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (278) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (282) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (288) heap_init: At 3FC9AE20 len 000251E0 (148 KiB): RAM[0m
+[0;32mI (293) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (299) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (314) spi_flash: flash io: dio[0m
+[0;33mW (317) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (330) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (336) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (353) pp: pp rom version: 9387209[0m
+[0;32mI (363) net80211: net80211 rom version: 9387209[0m
+[0;33mW (363) wifi:wifi osi_nvs_open fail ret=4353[0m
+
+[0;33mW (363) wifi_init: Failed to unregister Rx callbacks[0m
+[1;31mE (363) wifi_init: Failed to deinit Wi-Fi driver (0x3001)[0m
+[1;31mE (373) wifi_init: Failed to deinit Wi-Fi (0x3001)[0m
+wifi_init_softap finished. SSID:Son Tra  password:L02012001ACD value: 105.189255
+ACD value: 121.916977
+ACD value: 95.543343
+ACD value: 89.438339
+ACD value: 87.545792
+ACD value: 118.864464
+ACD value: 125.579979
+ACD value: 100.122108
+ACD value: 91.575089
+ACD value: 86.568985
+ACD value: 119.047615
+ACD value: 121.794868
+ACD value: 93.406593
+ACD value: 86.691086
+ACD value: 98.473747
+ACD value: 126.862022
+ACD value: 101.404152
+ACD value: 88.522591
+ACD value: 87.545792
+ACD value: 121.062263
+ACD value: 113.797318
+ACD value: 90.537239
+ACD value: 82.722832
+ACD value: 104.395607
+ACD value: 124.908424
+ACD value: 101.465202
+ACD value: 86.691086
+ACD value: 82.600731
+ACD value: 106.959709

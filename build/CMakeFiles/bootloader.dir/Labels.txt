@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader-complete.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

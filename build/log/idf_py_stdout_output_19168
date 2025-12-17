@@ -1,0 +1,74 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM9'
+�x��x�x��xx��x�xF�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 16 2025 23:21:22[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=18e94h (102036) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=00028ebc vaddr=3fc93e00 size=02cf4h ( 11508) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0002bbb8 vaddr=40380000 size=04460h ( 17504) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=92288h (598664) map[0m
+[0;32mI (212) esp_image: segment 4: paddr=000c22b0 vaddr=40384460 size=0f834h ( 63540) load[0m
+[0;32mI (224) esp_image: segment 5: paddr=000d1aec vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (230) boot: Disabling RNG early entropy source...[0m
+[0;32mI (241) cpu_start: Unicore app[0m
+[0;32mI (250) cpu_start: Pro cpu start user code[0m
+[0;32mI (250) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (250) app_init: Application information:[0m
+[0;32mI (250) app_init: Project name:     fan_idf[0m
+[0;32mI (254) app_init: App version:      1[0m
+[0;32mI (257) app_init: Compile time:     Dec 16 2025 23:21:02[0m
+[0;32mI (262) app_init: ELF file SHA256:  6e3efd9b3...[0m
+[0;32mI (267) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (270) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (274) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (278) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (282) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (288) heap_init: At 3FC9AE20 len 000251E0 (148 KiB): RAM[0m
+[0;32mI (293) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (300) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (306) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (330) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (336) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (363) pp: pp rom version: 9387209[0m
+[0;32mI (363) net80211: net80211 rom version: 9387209[0m
+[0;33mW (363) wifi:wifi osi_nvs_open fail ret=4353[0m
+
+[0;33mW (363) wifi_init: Failed to unregister Rx callbacks[0m
+[1;31mE (363) wifi_init: Failed to deinit Wi-Fi driver (0x3001)[0m
+[1;31mE (373) wifi_init: Failed to deinit Wi-Fi (0x3001)[0m
+wifi_init_softap finished. SSID:Son Tra  password:L02012001W (15373) mqtt5_example: Timeout waiting for Wi-Fi IP, attempting MQTT anyway
+ACD value: 78.876678
+ACD value: 96.642242
+ACD value: 116.727722
+ACD value: 100.549446
+ACD value: 77.960930
+ACD value: 74.908424
+ACD value: 78.815628
+ACD value: 108.974365
+ACD value: 108.974365
+ACD value: 81.562881

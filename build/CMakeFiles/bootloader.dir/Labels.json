@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
