@@ -1,0 +1,126 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 17 2025 20:58:04[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09474h ( 38004) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001949c vaddr=3fc8c200 size=013dch (  5084) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001a880 vaddr=40380000 size=05798h ( 22424) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18bf4h (101364) map[0m
+[0;32mI (127) esp_image: segment 4: paddr=00038c1c vaddr=40385798 size=069e0h ( 27104) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003f604 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (137) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (137) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Unicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     fan_idf[0m
+[0;32mI (165) app_init: App version:      a68990c-dirty[0m
+[0;32mI (169) app_init: Compile time:     Dec 17 2025 20:57:47[0m
+[0;32mI (174) app_init: ELF file SHA256:  796855f27...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC8E4E0 len 00031B20 (198 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (265) main_task: Calling app_main()[0m
+Failed to read from DHT22 sensor
+Temperature: 49.00 C, Humidity: 43.40 %
+Temperature: 48.50 C, Humidity: 43.30 %
+Temperature: 48.20 C, Humidity: 43.40 %
+Temperature: 47.80 C, Humidity: 43.40 %
+Temperature: 47.40 C, Humidity: 43.60 %
+Temperature: 47.00 C, Humidity: 43.70 %
+Temperature: 46.60 C, Humidity: 44.00 %
+Temperature: 46.20 C, Humidity: 44.40 %
+Temperature: 45.80 C, Humidity: 44.80 %
+Temperature: 45.40 C, Humidity: 45.10 %
+Temperature: 45.10 C, Humidity: 45.50 %
+Temperature: 44.70 C, Humidity: 45.90 %
+Temperature: 44.30 C, Humidity: 46.20 %
+Temperature: 43.90 C, Humidity: 46.60 %
+Temperature: 43.60 C, Humidity: 47.00 %
+Temperature: 43.30 C, Humidity: 47.40 %
+Temperature: 42.90 C, Humidity: 47.80 %
+Temperature: 42.60 C, Humidity: 48.20 %
+Temperature: 42.30 C, Humidity: 48.60 %
+Temperature: 41.90 C, Humidity: 48.90 %
+Temperature: 41.60 C, Humidity: 49.40 %
+Temperature: 41.30 C, Humidity: 49.70 %
+Temperature: 41.00 C, Humidity: 50.20 %
+Temperature: 40.70 C, Humidity: 50.60 %
+Temperature: 40.40 C, Humidity: 51.10 %
+Temperature: 40.10 C, Humidity: 51.50 %
+Temperature: 39.90 C, Humidity: 51.90 %
+Temperature: 39.60 C, Humidity: 52.30 %
+Temperature: 39.30 C, Humidity: 52.70 %
+Temperature: 39.10 C, Humidity: 53.10 %
+Temperature: 38.80 C, Humidity: 53.50 %
+Temperature: 38.60 C, Humidity: 53.90 %
+Temperature: 38.30 C, Humidity: 54.30 %
+Temperature: 38.10 C, Humidity: 54.70 %
+Temperature: 37.90 C, Humidity: 55.20 %
+Temperature: 37.60 C, Humidity: 56.80 %
+Temperature: 37.40 C, Humidity: 61.90 %
+Temperature: 37.00 C, Humidity: 60.10 %
+Temperature: 36.70 C, Humidity: 59.00 %
+Temperature: 36.50 C, Humidity: 58.90 %
+Temperature: 36.20 C, Humidity: 59.00 %
+Temperature: 36.00 C, Humidity: 59.30 %
+Temperature: 35.80 C, Humidity: 59.60 %
+Temperature: 35.60 C, Humidity: 59.90 %
+Temperature: 35.40 C, Humidity: 60.30 %
+Temperature: 35.20 C, Humidity: 60.70 %
+Temperature: 35.00 C, Humidity: 61.00 %
+Temperature: 34.80 C, Humidity: 61.40 %
+Temperature: 34.70 C, Humidity: 61.80 %
+Temperature: 34.50 C, Humidity: 62.20 %
+Temperature: 34.30 C, Humidity: 62.40 %
+Temperature: 34.20 C, Humidity: 62.80 %
+Temperature: 34.00 C, Humidity: 63.20 %
+Temperature: 33.90 C, Humidity: 63.50 %
+Temperature: 33.70 C, Humidity: 63.80 %
+Temperature: 33.60 C, Humidity: 64.20 %
+Temperature: 33.40 C, Humidity: 64.50 %
+Temperature: 33.30 C, Humidity: 64.80 %
+Temperature: 33.20 C, Humidity: 65.10 %
+Temperature: 33.00 C, Humidity: 65.50 %
+Temperature: 32.90 C, Humidity: 65.80 %
+Temperature: 32.80 C, Humidity: 66.10 %
+Temperature: 32.70 C, Humidity: 66.40 %
+Temperature: 32.60 C, Humidity: 66.80 %
+Temperature: 32.40 C, Humidity: 67.20 %
+Temperature: 32.30 C, Humidity: 67.50 %
+Temperature: 32.20 C, Humidity: 67.80 %
+Temperature: 32.10 C, Humidity: 68.10 %
+Temperature: 32.00 C, Humidity: 68.40 %

@@ -22,20 +22,21 @@
 #include "driver/gpio.h"
 #include "hal/adc_types.h"
 #include "esp_adc/adc_oneshot.h"
+#include "dht22.h"
 
 #define FAN_MODE1_PIN GPIO_NUM_4
 #define FAN_MODE2_PIN GPIO_NUM_5
 #define FAN_MODE3_PIN GPIO_NUM_6
 #define FAN_OCSILLATION_PIN GPIO_NUM_7
-typedef enum {
+typedef enum
+{
     FAN_MODE_OFF = 0,
     FAN_MODE_1,
     FAN_MODE_2,
     FAN_MODE_3,
-    FAN_MODE_OCSSILATION, 
+    FAN_MODE_OCSSILATION,
     FAN_MODE_OFF_OCSSILATION
 } fan_mode;
-
 
 const char *ssid = "Son Tra";
 const char *pass = "L02012001";
@@ -56,10 +57,9 @@ extern const uint8_t isrgrootx1_pem_end[] asm("_binary_isrgrootx1_pem_end");
 // wifi
 int retry_num = 0;
 
-
-
 static EventGroupHandle_t s_wifi_event_group;
-QueueHandle_t adc_queue, gpio_queue;
+QueueHandle_t adc_queue, gpio_queue, temp_queue, humi_queue;
+;
 
 #define WIFI_CONNECTED_BIT (1 << 0)
 
@@ -144,21 +144,22 @@ void mqtt_publish_task(void *pvParameters)
     char datatoSend2[20];
     while (1)
     {
-        // int val1 = esp_random() % 100;
-        // int val2 = esp_random() % 100;
-        // sprintf(datatoSend, "%d", val1);
-        // sprintf(datatoSend2, "%d", val2);
         float temp = 25.0;
-        xQueueReceive(adc_queue, &temp, portMAX_DELAY);
+        float humi = 60.0;
+        xQueueReceive(temp_queue, &temp, portMAX_DELAY);
+        xQueueReceive(humi_queue, &humi, portMAX_DELAY);
         sprintf(datatoSend, "%.2f", temp);
-        int msg_id = esp_mqtt_client_publish(mqttClient, "fan/status/temp1", datatoSend, 0, 0, 0);
-        int msg_id2 = esp_mqtt_client_publish(mqttClient, "fan/status/temp2", datatoSend2, 0, 0, 0);
-        // esp_mqtt5_client_set_publish_property(mqttClient, &publish_property);
-        if (msg_id == 0 && msg_id2 == 0)
-            ESP_LOGI(TAG, "Published temperature 25*C");
+        sprintf(datatoSend2, "%.2f", humi);
+        int msg_id1 = esp_mqtt_client_publish(mqttClient, "iot/room/temp", datatoSend, 0, 0, 0);
+        int msg_id2 = esp_mqtt_client_publish(mqttClient, "iot/room/humi", datatoSend2, 0, 0, 0);
+        if (msg_id1 == 0 && msg_id2 == 0)
+        {
+            ESP_LOGI(TAG, "Published temperature %.2f *C", temp);
+            ESP_LOGI(TAG, "Published humidity %.2f %%", humi);
+        }
         else
-            ESP_LOGI(TAG, "Error msg_id:%d %d while publishing temperature", msg_id, msg_id2);
-        vTaskDelay(pdMS_TO_TICKS(2000));
+            ESP_LOGI(TAG, "Error msg_id:%d while publishing temperature");
+        vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
@@ -172,7 +173,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
         msg_id = esp_mqtt_client_subscribe(client, "iot/fan/state", 0);
-        esp_mqtt_client_subscribe(client, "iot/fan/speed", 0);
         esp_mqtt_client_subscribe(client, "iot/fan/speed", 0);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
         xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 6, NULL);
@@ -198,18 +198,18 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_DATA");
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
-         if (strncmp(event->topic, "iot/fan/state", event->topic_len) == 0)
+        if (strncmp(event->topic, "iot/fan/state", event->topic_len) == 0)
         {
-            if(strncmp(event->data, "OFF", event->data_len) == 0)
+            if (strncmp(event->data, "OFF", event->data_len) == 0)
             {
                 ESP_LOGI(TAG, "Turning Off FAN");
                 fan_mode cmd = FAN_MODE_OFF;
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
         }
-         if (strncmp(event->topic, "iot/fan/ocs", event->topic_len) == 0)
+        if (strncmp(event->topic, "iot/fan/ocs", event->topic_len) == 0)
         {
-            if(strncmp(event->data, "ON", event->data_len) == 0)
+            if (strncmp(event->data, "ON", event->data_len) == 0)
             {
                 ESP_LOGI(TAG, "Turning on OCSILLATION");
                 fan_mode cmd = FAN_MODE_OCSSILATION;
@@ -225,25 +225,25 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         if (strncmp(event->topic, "iot/fan/speed", event->topic_len) == 0)
         {
 
-            if(strncmp(event->data, "1", event->data_len) == 0)
+            if (strncmp(event->data, "1", event->data_len) == 0)
             {
                 ESP_LOGI(TAG, "1");
                 fan_mode cmd = FAN_MODE_1;
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
-            else if(strncmp(event->data, "2", event->data_len) == 0)
+            else if (strncmp(event->data, "2", event->data_len) == 0)
             {
                 ESP_LOGI(TAG, "Mode 2");
-                fan_mode cmd = FAN_MODE_1;
+                fan_mode cmd = FAN_MODE_2;
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
-            else if(strncmp(event->data, "3", event->data_len) == 0)
+            else if (strncmp(event->data, "3", event->data_len) == 0)
             {
                 ESP_LOGI(TAG, "Mode 3");
-                fan_mode cmd = FAN_MODE_1;
+                fan_mode cmd = FAN_MODE_3;
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
-            
+
             else
             {
                 ESP_LOGI(TAG, "Fan OFF");
@@ -276,8 +276,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             //     gpio_set_level(5, 0);
             //     gpio_set_level(6, 0);
             // }
-
-
         }
         break;
 
@@ -330,11 +328,11 @@ static void mqtt_app_start(void)
 void adc_task(void *pvParameters)
 {
     int adc_value = 0;
-    while(1)
+    while (1)
     {
         adc_oneshot_read(adc1_handle, ADC_CHANNEL_3, &adc_value);
-        float lm35_vol = (adc_value/4095.0)*2.5;
-        float temp = lm35_vol *100;
+        float lm35_vol = (adc_value / 4095.0) * 2.5;
+        float temp = lm35_vol * 100;
         xQueueSend(adc_queue, &temp, portMAX_DELAY);
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
@@ -343,37 +341,39 @@ void adc_task(void *pvParameters)
 void gpio_task(void *pvParemeters)
 {
     fan_mode cmd;
-    while(1)
+    while (1)
     {
         xQueueReceive(gpio_queue, &cmd, portMAX_DELAY);
-        switch(cmd)
+        ESP_LOGI(TAG, "Received fan mode command: %d", cmd);
+        switch (cmd)
         {
-            case FAN_MODE_1:
-                gpio_set_level(FAN_MODE1_PIN, 1);
-                gpio_set_level(FAN_MODE2_PIN, 0);
-                gpio_set_level(FAN_MODE3_PIN, 0);
-                break;
-            case FAN_MODE_2:
-                gpio_set_level(FAN_MODE1_PIN, 0);   
-                gpio_set_level(FAN_MODE2_PIN, 1);
-                gpio_set_level(FAN_MODE3_PIN, 0);
-                break;
-            case FAN_MODE_3:
-                gpio_set_level(FAN_MODE1_PIN, 0);   
-                gpio_set_level(FAN_MODE2_PIN, 0);
-                gpio_set_level(FAN_MODE3_PIN, 1);
-                break;
-            case FAN_MODE_OCSSILATION:
-                gpio_set_level(FAN_OCSILLATION_PIN, 1);
-                break;
-            case FAN_MODE_OFF_OCSSILATION:
-                gpio_set_level(FAN_OCSILLATION_PIN, 0);
-                break;
-            case FAN_MODE_OFF:
-                gpio_set_level(FAN_MODE1_PIN, 0);
-                gpio_set_level(FAN_MODE2_PIN, 0);
-                gpio_set_level(FAN_MODE3_PIN, 0);
-                gpio_set_level(FAN_OCSILLATION_PIN, 0);
+        case FAN_MODE_1:
+            ESP_LOGI(TAG, "FAN MODE 1");
+            gpio_set_level(FAN_MODE2_PIN, 0);
+            gpio_set_level(FAN_MODE3_PIN, 0);
+            gpio_set_level(FAN_MODE1_PIN, 1);
+            break;
+        case FAN_MODE_2:
+            gpio_set_level(FAN_MODE1_PIN, 0);
+            gpio_set_level(FAN_MODE3_PIN, 0);
+            gpio_set_level(FAN_MODE2_PIN, 1);
+            break;
+        case FAN_MODE_3:
+            gpio_set_level(FAN_MODE1_PIN, 0);
+            gpio_set_level(FAN_MODE2_PIN, 0);
+            gpio_set_level(FAN_MODE3_PIN, 1);
+            break;
+        case FAN_MODE_OCSSILATION:
+            gpio_set_level(FAN_OCSILLATION_PIN, 1);
+            break;
+        case FAN_MODE_OFF_OCSSILATION:
+            gpio_set_level(FAN_OCSILLATION_PIN, 0);
+            break;
+        case FAN_MODE_OFF:
+            gpio_set_level(FAN_MODE1_PIN, 0);
+            gpio_set_level(FAN_MODE2_PIN, 0);
+            gpio_set_level(FAN_MODE3_PIN, 0);
+            gpio_set_level(FAN_OCSILLATION_PIN, 0);
         }
     }
 }
@@ -386,6 +386,7 @@ void gpio_input_config()
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
         .pull_up_en = GPIO_PULLUP_ENABLE,
     };
+    gpio_config(&gpio_input);
 }
 
 void gpio_output_config()
@@ -393,7 +394,7 @@ void gpio_output_config()
     gpio_config_t gpio_output = {
         .intr_type = GPIO_INTR_DISABLE,
         .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = 1ULL << 4 | 1ULL << 5 | 1ULL << 6, // gpio 4,5,6
+        .pin_bit_mask = 1ULL << FAN_MODE1_PIN | 1ULL << FAN_MODE2_PIN | 1ULL << FAN_MODE3_PIN | 1ULL << FAN_OCSILLATION_PIN, // gpio 4,5,6,7
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
         .pull_up_en = GPIO_PULLUP_DISABLE,
     };
@@ -407,7 +408,7 @@ void adc_config()
         .unit_id = ADC_UNIT_1,
         .ulp_mode = ADC_ULP_MODE_DISABLE,
     };
-    
+
     adc_oneshot_chan_cfg_t config = {
         .bitwidth = ADC_BITWIDTH_12,
         .atten = ADC_ATTEN_DB_11,
@@ -415,11 +416,28 @@ void adc_config()
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_3, &config));
 }
+
+void temp_task(void *pv)
+{
+    float temp = 0.0;
+    float humi = 0.0;
+    while (1)
+    {
+        if (dht22_read(&temp, &humi))
+        {
+            xQueueSend(temp_queue, &temp, portMAX_DELAY);
+            xQueueSend(humi_queue, &humi, portMAX_DELAY);
+        }
+        vTaskDelay(pdMS_TO_TICKS(5000));
+    }
+}
 void app_main(void)
 {
     gpio_output_config();
     adc_queue = xQueueCreate(5, sizeof(float));
     gpio_queue = xQueueCreate(5, sizeof(fan_mode));
+    temp_queue = xQueueCreate(5, sizeof(float));
+    humi_queue = xQueueCreate(5, sizeof(float));
     nvs_flash_init();
     wifi_connection();
 
@@ -434,14 +452,23 @@ void app_main(void)
         ESP_LOGI(TAG, "Wi-Fi connected, starting MQTT client to %s", HIVEMQ_URI);
     }
     mqtt_app_start();
-    adc_config();
+    // adc_config();
 
-    xTaskCreate(adc_task, "adc_task", 4096, NULL, 5, NULL);
+    // xTaskCreate(adc_task, "adc_task", 4096, NULL, 5, NULL);
     xTaskCreate(gpio_task, "gpio_task", 4096, NULL, 4, NULL);
-    // xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 6, NULL);
+    xTaskCreate(temp_task, "temp_task", 4096, NULL, 3, NULL);
+    // float temperature = 0.0;
+    // float humidity = 0.0;
     // while (1)
     // {
-        
-    //     vTaskDelay(pdMS_TO_TICKS(1000));
+    //     if (dht22_read(&temperature, &humidity) == 1)
+    //     {
+    //         printf("Temperature: %.2f C, Humidity: %.2f %%\n", temperature, humidity);
+    //     }
+    //     else
+    //     {
+    //         printf("Failed to read from DHT22 sensor\n");
+    //     }
+    //     vTaskDelay(pdMS_TO_TICKS(2000));
     // }
 }

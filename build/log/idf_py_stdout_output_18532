@@ -1,0 +1,172 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 17 2025 20:58:04[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09474h ( 38004) map[0m
+[0;32mI (95) esp_image: segment 1: paddr=0001949c vaddr=3fc8c200 size=013dch (  5084) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001a880 vaddr=40380000 size=05798h ( 22424) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18bf4h (101364) map[0m
+[0;32mI (127) esp_image: segment 4: paddr=00038c1c vaddr=40385798 size=069e0h ( 27104) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003f604 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (137) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (137) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Unicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     fan_idf[0m
+[0;32mI (165) app_init: App version:      a68990c-dirty[0m
+[0;32mI (169) app_init: Compile time:     Dec 17 2025 20:57:47[0m
+[0;32mI (174) app_init: ELF file SHA256:  796855f27...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC8E4E0 len 00031B20 (198 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (265) main_task: Calling app_main()[0m
+Failed to read from DHT22 sensor
+Temperature: 24.60 C, Humidity: 99.40 %
+Temperature: 24.60 C, Humidity: 99.40 %
+Temperature: 24.60 C, Humidity: 99.40 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.60 C, Humidity: 99.30 %
+Temperature: 24.70 C, Humidity: 99.30 %
+Temperature: 24.70 C, Humidity: 100.00 %
+Temperature: 24.80 C, Humidity: 100.00 %
+Temperature: 24.90 C, Humidity: 100.00 %
+Temperature: 25.10 C, Humidity: 100.00 %
+Temperature: 25.30 C, Humidity: 100.00 %
+Temperature: 25.40 C, Humidity: 100.00 %
+Temperature: 25.60 C, Humidity: 100.00 %
+Temperature: 25.70 C, Humidity: 100.00 %
+Temperature: 25.80 C, Humidity: 100.00 %
+Temperature: 25.90 C, Humidity: 100.00 %
+Temperature: 26.00 C, Humidity: 100.00 %
+Temperature: 26.00 C, Humidity: 99.90 %
+Temperature: 26.10 C, Humidity: 98.90 %
+Temperature: 26.10 C, Humidity: 98.20 %
+Temperature: 26.10 C, Humidity: 97.50 %
+Temperature: 26.20 C, Humidity: 96.90 %
+Temperature: 26.20 C, Humidity: 96.30 %
+Temperature: 26.20 C, Humidity: 95.90 %
+Temperature: 26.20 C, Humidity: 95.50 %
+Temperature: 26.20 C, Humidity: 95.20 %
+Temperature: 26.20 C, Humidity: 95.00 %
+Temperature: 26.20 C, Humidity: 94.80 %
+Temperature: 26.30 C, Humidity: 95.40 %
+Temperature: 26.40 C, Humidity: 96.60 %
+Temperature: 26.50 C, Humidity: 97.10 %
+Temperature: 26.70 C, Humidity: 97.40 %
+Temperature: 26.90 C, Humidity: 97.30 %
+Temperature: 27.10 C, Humidity: 97.30 %
+Temperature: 27.40 C, Humidity: 97.20 %
+Temperature: 27.60 C, Humidity: 96.80 %
+Temperature: 27.90 C, Humidity: 96.20 %
+Temperature: 28.00 C, Humidity: 98.10 %
+Temperature: 28.10 C, Humidity: 96.00 %
+Temperature: 28.20 C, Humidity: 93.60 %
+Temperature: 28.20 C, Humidity: 91.60 %
+Temperature: 28.30 C, Humidity: 90.30 %
+Temperature: 28.30 C, Humidity: 89.40 %
+Temperature: 28.30 C, Humidity: 88.80 %
+Temperature: 28.40 C, Humidity: 88.30 %
+Temperature: 28.40 C, Humidity: 87.90 %
+Temperature: 28.40 C, Humidity: 87.60 %
+Temperature: 28.40 C, Humidity: 87.30 %
+Temperature: 28.40 C, Humidity: 87.10 %
+Temperature: 28.30 C, Humidity: 86.70 %
+Temperature: 28.30 C, Humidity: 86.70 %
+Temperature: 28.20 C, Humidity: 86.60 %
+Temperature: 28.20 C, Humidity: 86.60 %
+Temperature: 28.20 C, Humidity: 86.60 %
+Temperature: 28.10 C, Humidity: 86.60 %
+Temperature: 28.10 C, Humidity: 86.60 %
+Temperature: 28.10 C, Humidity: 86.70 %
+Temperature: 28.00 C, Humidity: 86.70 %
+Temperature: 28.00 C, Humidity: 86.80 %
+Temperature: 27.90 C, Humidity: 86.80 %
+Temperature: 27.90 C, Humidity: 86.90 %
+Temperature: 27.90 C, Humidity: 87.00 %
+Temperature: 27.80 C, Humidity: 87.00 %
+Temperature: 27.80 C, Humidity: 87.10 %
+Temperature: 27.70 C, Humidity: 87.30 %
+Temperature: 27.70 C, Humidity: 87.40 %
+Temperature: 27.60 C, Humidity: 87.50 %
+Temperature: 27.60 C, Humidity: 87.60 %
+Temperature: 27.60 C, Humidity: 87.70 %
+Temperature: 27.50 C, Humidity: 87.90 %
+Temperature: 27.50 C, Humidity: 88.00 %
+Temperature: 27.40 C, Humidity: 88.10 %
+Temperature: 27.40 C, Humidity: 88.20 %
+Temperature: 27.40 C, Humidity: 88.30 %
+Temperature: 27.30 C, Humidity: 88.40 %
+Temperature: 27.30 C, Humidity: 88.50 %
+Temperature: 27.20 C, Humidity: 88.70 %
+Temperature: 27.20 C, Humidity: 88.80 %
+Temperature: 27.20 C, Humidity: 88.90 %
+Temperature: 27.10 C, Humidity: 89.00 %
+Temperature: 27.10 C, Humidity: 89.20 %
+Temperature: 27.10 C, Humidity: 89.30 %
+Temperature: 27.00 C, Humidity: 89.40 %
+Temperature: 27.00 C, Humidity: 89.50 %
+Temperature: 26.90 C, Humidity: 89.70 %
+Temperature: 26.90 C, Humidity: 89.80 %
+Temperature: 26.90 C, Humidity: 89.90 %
+Temperature: 26.80 C, Humidity: 90.10 %
+Temperature: 26.80 C, Humidity: 90.10 %
+Temperature: 26.80 C, Humidity: 90.30 %
+Temperature: 26.70 C, Humidity: 90.40 %
+Temperature: 26.70 C, Humidity: 90.50 %
+Temperature: 26.70 C, Humidity: 90.60 %
+Temperature: 26.60 C, Humidity: 90.70 %
+Temperature: 26.60 C, Humidity: 90.80 %
+Temperature: 26.60 C, Humidity: 90.90 %
+Temperature: 26.60 C, Humidity: 91.00 %
+Temperature: 26.50 C, Humidity: 91.10 %
+Temperature: 26.50 C, Humidity: 91.30 %
+Temperature: 26.50 C, Humidity: 91.40 %
+Temperature: 26.50 C, Humidity: 91.50 %
+Temperature: 26.40 C, Humidity: 91.60 %
+Temperature: 26.40 C, Humidity: 91.70 %
+Temperature: 26.40 C, Humidity: 91.80 %
+Temperature: 26.40 C, Humidity: 91.80 %
+Temperature: 26.30 C, Humidity: 91.90 %
+Temperature: 26.30 C, Humidity: 92.00 %
+Temperature: 26.30 C, Humidity: 92.10 %
+Temperature: 26.30 C, Humidity: 92.20 %
+Temperature: 26.20 C, Humidity: 92.20 %
+Temperature: 26.20 C, Humidity: 92.30 %

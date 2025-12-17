@@ -1,0 +1,43 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\esp-idf\esptool_py && C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/dht22.c.obj
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: In function 'mqtt_publish_task':
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:145:10: warning: unused variable 'datatoSend2' [-Wunused-variable]
+  145 |     char datatoSend2[20];
+      |          ^~~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: In function 'gpio_input_config':
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:379:19: warning: unused variable 'gpio_input' [-Wunused-variable]
+  379 |     gpio_config_t gpio_input = {
+      |                   ^~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: In function 'adc_config':
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:410:9: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+  410 |         .atten = ADC_ATTEN_DB_11,
+      |         ^
+In file included from E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:23:
+C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: At top level:
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:306:13: warning: 'mqtt_app_start' defined but not used [-Wunused-function]
+  306 | static void mqtt_app_start(void)
+      |             ^~~~~~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:134:13: warning: 'log_error_if_nonzero' defined but not used [-Wunused-function]
+  134 | static void log_error_if_nonzero(const char *message, int error_code)
+      |             ^~~~~~~~~~~~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:50:20: warning: 'HIVEMQ_URI' defined but not used [-Wunused-variable]
+   50 | static const char *HIVEMQ_URI = "mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883";
+      |                    ^~~~~~~~~~
+[6/10] Linking C static library esp-idf\main\libmain.a
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+[8/10] Linking CXX executable fan_idf.elf
+FAILED: fan_idf.elf 
+C:\Windows\system32\cmd.exe /C "cd . && C:\Users\ADMIN\.espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C3=0 -Wl,--Map=E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T rom.api.ld -T esp32c3.peripherals.ld -T esp32c3.rom.ld -T esp32c3.rom.api.ld -T esp32c3.rom.bt_funcs.ld -T esp32c3.rom.libgcc.ld -T esp32c3.rom.version.ld -T esp32c3.rom.ble_master.ld -T esp32c3.rom.ble_50.ld -T esp32c3.rom.ble_smp.ld -T esp32c3.rom.ble_dtm.ld -T esp32c3.rom.ble_test.ld -T esp32c3.rom.ble_scan.ld -T esp32c3.rom.eco3.ld -T esp32c3.rom.eco3_bt_funcs.ld -T esp32c3.rom.libc.ld -T esp32c3.rom.libc-suboptimal_for_misaligned_mem.ld -T esp32c3.rom.newlib.ld -T memory.ld -T sections.ld @CMakeFiles\fan_idf.elf.rsp -o fan_idf.elf && cd ."
+C:/Users/ADMIN/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(app_main.c.obj): in function `app_main':
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:443:(.text.app_main+0x32): undefined reference to `dht22_read'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

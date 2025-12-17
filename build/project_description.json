@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "fan_idf",
-    "project_version":    "1",
+    "project_version":    "a68990c-dirty",
     "project_path":       "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf",
     "idf_path":           "C:/Users/ADMIN/esp/v5.5.1/esp-idf",
     "build_dir":          "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build",
@@ -910,7 +910,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "file": "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/esp-idf/main/libmain.a",
-            "sources": [ "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c", "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/isrgrootx1.pem.S" ],
+            "sources": [ "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c", "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/dht22.c", "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/isrgrootx1.pem.S" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

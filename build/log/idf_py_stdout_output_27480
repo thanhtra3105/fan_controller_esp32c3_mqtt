@@ -1,0 +1,21 @@
+Command: ninja flash
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\esp-idf\esptool_py && C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/partition_table/partition-table.bin E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.bin"
+fan_idf.bin binary size 0xed6e0 bytes. Smallest app partition is 0x177000 bytes. 0x89920 bytes (37%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\esp-idf\esptool_py && C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\ADMIN\esp\v5.5.1\esp-idf\components\esptool_py && C:\Users\ADMIN\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/ADMIN/esp/v5.5.1/esp-idf -D SERIAL_TOOL=C:/Users/ADMIN/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build -P C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32c3 -p COM9 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 fan_idf.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port COM9
+
+A fatal error occurred: Could not open COM9, the port is busy or doesn't exist.
+(could not open port 'COM9': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2))
+
+Hint: Check if the port is correct and ESP connected
+
+FAILED: CMakeFiles/flash E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/CMakeFiles/flash 
+C:\Windows\system32\cmd.exe /C "cd /D C:\Users\ADMIN\esp\v5.5.1\esp-idf\components\esptool_py && C:\Users\ADMIN\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/ADMIN/esp/v5.5.1/esp-idf -D SERIAL_TOOL=C:/Users/ADMIN/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build -P C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

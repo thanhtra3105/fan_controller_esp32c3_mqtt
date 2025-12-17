@@ -1,0 +1,754 @@
+Command: ninja monitor\
+[0/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\ADMIN\esp\v5.5.1\esp-idf\components\esptool_py && C:\Users\ADMIN\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/ADMIN/esp/v5.5.1/esp-idf -D SERIAL_TOOL=C:/Users/ADMIN/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;-m;esp_idf_monitor -D SERIAL_TOOL_ARGS=--toolchain-prefix;riscv32-esp-elf-;;--target;esp32c3;;--revision;3;;--decode-panic;backtrace;;E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.elf -D WORKING_DIRECTORY=E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build -P run_serial_tool.cmake"
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+I (30) boot: ESP-IDF v5.5.1 2nd stage bootloader
+I (30) boot: compile time Dec 17 2025 20:58:04
+I (30) boot: chip revision: v0.4
+I (30) boot: efuse block revision: v1.3
+I (34) boot.esp32c3: SPI Speed      : 80MHz
+I (38) boot.esp32c3: SPI Mode       : DIO
+I (41) boot.esp32c3: SPI Flash Size : 2MB
+I (45) boot: Enabling RNG early entropy source...
+I (50) boot: Partition Table:
+I (52) boot: ## Label            Usage          Type ST Offset   Length
+I (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (72) boot:  2 factory          factory app      00 00 00010000 00177000
+I (78) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=1f98ch (129420) map
+I (110) esp_image: segment 1: paddr=0002f9b4 vaddr=3fc94600 size=00664h (  1636) load
+I (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=b6b34h (748340) map
+I (233) esp_image: segment 3: paddr=000e6b5c vaddr=3fc94c64 size=02778h ( 10104) load
+I (235) esp_image: segment 4: paddr=000e92dc vaddr=40380000 size=14554h ( 83284) load
+I (252) esp_image: segment 5: paddr=000fd838 vaddr=50000000 size=00020h (    32) load
+I (258) boot: Loaded app from partition at offset 0x10000
+I (258) boot: Disabling RNG early entropy source...
+I (269) cpu_start: Unicore app
+I (278) cpu_start: Pro cpu start user code
+I (278) cpu_start: cpu freq: 160000000 Hz
+I (278) app_init: Application information:
+I (278) app_init: Project name:     fan_idf
+I (282) app_init: App version:      a68990c-dirty
+I (286) app_init: Compile time:     Dec 17 2025 20:57:47
+I (291) app_init: ELF file SHA256:  521a77402...
+I (296) app_init: ESP-IDF:          v5.5.1
+I (299) efuse_init: Min chip rev:     v0.3
+I (303) efuse_init: Max chip rev:     v1.99 
+I (307) efuse_init: Chip rev:         v0.4
+I (311) heap_init: Initializing. RAM available for dynamic allocation:
+I (317) heap_init: At 3FC9BD00 len 00024300 (144 KiB): RAM
+I (322) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM
+I (328) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM
+I (334) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM
+I (341) spi_flash: detected chip: generic
+I (344) spi_flash: flash io: dio
+W (346) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (359) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (372) main_task: Started on CPU0
+I (382) main_task: Calling app_main()
+I (392) pp: pp rom version: 9387209
+I (392) net80211: net80211 rom version: 9387209
+I (402) wifi:wifi driver task: 3fca4a60, prio:23, stack:6656, core=0
+I (402) wifi:wifi firmware version: 14da9b7
+I (402) wifi:wifi certification version: v7.0
+I (402) wifi:config NVS flash: enabled
+I (412) wifi:config nano formatting: disabled
+I (412) wifi:Init data frame dynamic rx buffer num: 32
+I (422) wifi:Init static rx mgmt buffer num: 5
+I (422) wifi:Init management short buffer num: 32
+I (422) wifi:Init dynamic tx buffer num: 32
+I (432) wifi:Init static tx FG buffer num: 2
+I (432) wifi:Init static rx buffer size: 1600
+I (442) wifi:Init static rx buffer num: 10
+I (442) wifi:Init dynamic rx buffer num: 32
+I (442) wifi_init: rx ba win: 6
+I (452) wifi_init: accept mbox: 6
+I (452) wifi_init: tcpip mbox: 32
+I (452) wifi_init: udp mbox: 6
+I (462) wifi_init: tcp mbox: 6
+I (462) wifi_init: tcp tx win: 5760
+I (462) wifi_init: tcp rx win: 5760
+I (462) wifi_init: tcp mss: 1440
+I (472) wifi_init: WiFi IRAM OP enabled
+I (472) wifi_init: WiFi RX IRAM OP enabled
+W (482) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+I (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21
+I (562) wifi:mode : sta (f0:f5:bd:fb:0f:80)
+I (562) wifi:enable tsf
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (582) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (582) wifi:state: init -> auth (0xb0)
+I (592) wifi:state: auth -> assoc (0x0)
+I (612) wifi:state: assoc -> run (0x10)
+I (1652) wifi:connected with Son Tra, aid = 29, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6
+I (1652) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (1652) wifi:pm start, type: 1
+
+I (1652) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1662) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+WiFi CONNECTED
+I (1702) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1712) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (3182) esp_netif_handlers: sta ip: 192.168.87.44, mask: 255.255.255.0, gw: 192.168.87.165
+Wifi got IP...
+
+I (3182) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883
+I (3192) mqtt5_example: Other event id:7
+I (3202) main_task: Returned from app_main()
+I (3352) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64
+I (6392) mqtt5_example: MQTT_EVENT_CONNECTED
+I (6402) mqtt5_example: sent subscribe successful, msg_id=20649
+I (6402) mqtt5_example: Published temperature 0.00 *C
+I (6402) mqtt5_example: Published humidity 0.00 %
+I (6852) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=20649, return code=0x00 
+I (7242) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=5688, return code=0x00 
+I (11402) mqtt5_example: Published temperature 24.90 *C
+I (11402) mqtt5_example: Published humidity 95.70 %
+I (16402) mqtt5_example: Published temperature 24.90 *C
+I (16402) mqtt5_example: Published humidity 95.80 %
+I (21402) mqtt5_example: Published temperature 24.90 *C
+I (21402) mqtt5_example: Published humidity 95.90 %
+I (26402) mqtt5_example: Published temperature 24.80 *C
+I (26402) mqtt5_example: Published humidity 96.10 %
+I (31402) mqtt5_example: Published temperature 24.80 *C
+I (31402) mqtt5_example: Published humidity 96.10 %
+I (36402) mqtt5_example: Published temperature 24.80 *C
+I (36402) mqtt5_example: Published humidity 96.30 %
+I (41042) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/state
+DATA=OFF
+I (41042) mqtt5_example: Turning Off FAN
+I (41042) mqtt5_example: Received fan mode command: 0
+I (41052) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=0
+I (41052) mqtt5_example: Fan OFF
+I (41052) mqtt5_example: Received fan mode command: 0
+I (41402) mqtt5_example: Published temperature 24.80 *C
+I (41402) mqtt5_example: Published humidity 96.40 %
+I (41652) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/state
+DATA=ON
+I (43082) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (43082) mqtt5_example: 1
+I (43082) mqtt5_example: Received fan mode command: 1
+I (43082) mqtt5_example: FAN MODE 1
+I (45762) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (45762) mqtt5_example: Mode 2
+I (45762) mqtt5_example: Received fan mode command: 2
+I (46402) mqtt5_example: Published temperature 24.80 *C
+I (46402) mqtt5_example: Published humidity 96.50 %
+I (47182) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (47182) mqtt5_example: Mode 3
+I (47182) mqtt5_example: Received fan mode command: 3
+I (48652) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (48652) mqtt5_example: Mode 2
+I (48652) mqtt5_example: Received fan mode command: 2
+I (49842) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (49842) mqtt5_example: 1
+I (49842) mqtt5_example: Received fan mode command: 1
+I (49842) mqtt5_example: FAN MODE 1
+I (51092) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (51092) mqtt5_example: Mode 2
+I (51102) mqtt5_example: Received fan mode command: 2
+I (51402) mqtt5_example: Published temperature 24.70 *C
+I (51402) mqtt5_example: Published humidity 96.60 %
+I (51892) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (51892) mqtt5_example: Mode 3
+I (51892) mqtt5_example: Received fan mode command: 3
+I (52912) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (52912) mqtt5_example: Mode 2
+I (52912) mqtt5_example: Received fan mode command: 2
+I (52922) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (52922) mqtt5_example: 1
+I (52922) mqtt5_example: Received fan mode command: 1
+I (52932) mqtt5_example: FAN MODE 1
+I (54352) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (54352) mqtt5_example: Mode 2
+I (54352) mqtt5_example: Received fan mode command: 2
+I (55172) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (55172) mqtt5_example: 1
+I (55172) mqtt5_example: Received fan mode command: 1
+I (55172) mqtt5_example: FAN MODE 1
+I (55182) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (55182) mqtt5_example: Mode 2
+I (55182) mqtt5_example: Received fan mode command: 2
+I (55572) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (55582) mqtt5_example: 1
+I (55582) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (55582) mqtt5_example: Mode 2
+I (55582) mqtt5_example: Received fan mode command: 1
+I (55592) mqtt5_example: FAN MODE 1
+I (55592) mqtt5_example: Received fan mode command: 2
+I (55622) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (55622) mqtt5_example: 1
+I (55622) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (55622) mqtt5_example: Mode 2
+I (55622) mqtt5_example: Received fan mode command: 1
+I (55632) mqtt5_example: FAN MODE 1
+I (55632) mqtt5_example: Received fan mode command: 2
+I (56002) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (56002) mqtt5_example: 1
+I (56012) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56012) mqtt5_example: Mode 2
+I (56012) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56022) mqtt5_example: Mode 2
+I (56022) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (56022) mqtt5_example: 1
+I (56032) mqtt5_example: Received fan mode command: 1
+I (56032) mqtt5_example: FAN MODE 1
+I (56042) mqtt5_example: Received fan mode command: 2
+I (56042) mqtt5_example: Received fan mode command: 2
+I (56042) mqtt5_example: Received fan mode command: 1
+I (56052) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56062) mqtt5_example: Mode 2
+I (56062) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (56072) mqtt5_example: 1
+I (56072) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56072) mqtt5_example: Mode 2
+I (56082) mqtt5_example: FAN MODE 1
+I (56082) mqtt5_example: Received fan mode command: 2
+I (56082) mqtt5_example: Received fan mode command: 1
+I (56092) mqtt5_example: FAN MODE 1
+I (56092) mqtt5_example: Received fan mode command: 2
+I (56322) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56322) mqtt5_example: Mode 2
+I (56322) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (56332) mqtt5_example: 1
+I (56332) mqtt5_example: Received fan mode command: 2
+I (56332) mqtt5_example: Received fan mode command: 1
+I (56342) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (56342) mqtt5_example: Mode 2
+I (56352) mqtt5_example: FAN MODE 1
+I (56352) mqtt5_example: Received fan mode command: 2
+I (56402) mqtt5_example: Published temperature 24.70 *C
+I (56402) mqtt5_example: Published humidity 96.70 %
+I (57212) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (57212) mqtt5_example: 1
+I (57222) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (57222) mqtt5_example: Mode 2
+I (57222) mqtt5_example: Received fan mode command: 1
+I (57232) mqtt5_example: FAN MODE 1
+I (57232) mqtt5_example: Received fan mode command: 2
+I (57602) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (57602) mqtt5_example: 1
+I (57602) mqtt5_example: Received fan mode command: 1
+I (57602) mqtt5_example: FAN MODE 1
+I (57862) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (57862) mqtt5_example: Mode 2
+I (57862) mqtt5_example: Received fan mode command: 2
+I (59362) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (59362) mqtt5_example: 1
+I (59362) mqtt5_example: Received fan mode command: 1
+I (59362) mqtt5_example: FAN MODE 1
+I (59742) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (59742) mqtt5_example: Mode 2
+I (59742) mqtt5_example: Received fan mode command: 2
+I (61112) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (61112) mqtt5_example: Mode 2
+I (61112) mqtt5_example: Received fan mode command: 2
+I (61402) mqtt5_example: Published temperature 24.70 *C
+I (61402) mqtt5_example: Published humidity 96.70 %
+I (62872) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (62872) mqtt5_example: 1
+I (62872) mqtt5_example: Received fan mode command: 1
+I (62872) mqtt5_example: FAN MODE 1
+I (63832) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (63832) mqtt5_example: Mode 2
+I (63832) mqtt5_example: Received fan mode command: 2
+I (64302) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (64302) mqtt5_example: Mode 3
+I (64312) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (64312) mqtt5_example: Mode 3
+I (64312) mqtt5_example: Received fan mode command: 3
+I (64322) mqtt5_example: Received fan mode command: 3
+I (64612) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (64612) mqtt5_example: 1
+I (64612) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (64612) mqtt5_example: Mode 2
+I (64612) mqtt5_example: Received fan mode command: 1
+I (64622) mqtt5_example: FAN MODE 1
+I (64622) mqtt5_example: Received fan mode command: 2
+I (65322) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (65322) mqtt5_example: 1
+I (65332) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (65332) mqtt5_example: Mode 3
+I (65332) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (65342) mqtt5_example: Mode 2
+I (65342) mqtt5_example: Received fan mode command: 1
+I (65342) mqtt5_example: FAN MODE 1
+I (65352) mqtt5_example: Received fan mode command: 3
+I (65352) mqtt5_example: Received fan mode command: 2
+I (65422) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (65432) mqtt5_example: 1
+I (65432) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (65432) mqtt5_example: Mode 3
+I (65432) mqtt5_example: Received fan mode command: 1
+I (65442) mqtt5_example: FAN MODE 1
+I (65442) mqtt5_example: Received fan mode command: 3
+I (65892) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (65892) mqtt5_example: 1
+I (65902) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (65902) mqtt5_example: Mode 2
+I (65902) mqtt5_example: Received fan mode command: 1
+I (65902) mqtt5_example: FAN MODE 1
+I (65912) mqtt5_example: Received fan mode command: 2
+I (66362) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (66362) mqtt5_example: 1
+I (66362) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (66362) mqtt5_example: Mode 3
+I (66372) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (66372) mqtt5_example: 1
+I (66372) mqtt5_example: Received fan mode command: 1
+I (66382) mqtt5_example: FAN MODE 1
+I (66382) mqtt5_example: Received fan mode command: 3
+I (66392) mqtt5_example: Received fan mode command: 1
+I (66392) mqtt5_example: FAN MODE 1
+I (66402) mqtt5_example: Published temperature 24.70 *C
+I (66402) mqtt5_example: Published humidity 97.00 %
+I (66562) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (66562) mqtt5_example: Mode 2
+I (66562) mqtt5_example: Received fan mode command: 2
+I (66762) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (66762) mqtt5_example: 1
+I (66762) mqtt5_example: Received fan mode command: 1
+I (66762) mqtt5_example: FAN MODE 1
+I (66802) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (66802) mqtt5_example: Mode 3
+I (66802) mqtt5_example: Received fan mode command: 3
+I (67172) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (67172) mqtt5_example: 1
+I (67172) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (67172) mqtt5_example: Mode 2
+I (67182) mqtt5_example: Received fan mode command: 1
+I (67182) mqtt5_example: FAN MODE 1
+I (67182) mqtt5_example: Received fan mode command: 2
+I (67382) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (67382) mqtt5_example: 1
+I (67382) mqtt5_example: Received fan mode command: 1
+I (67382) mqtt5_example: FAN MODE 1
+I (67582) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (67582) mqtt5_example: Mode 3
+I (67582) mqtt5_example: Received fan mode command: 3
+I (67792) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (67792) mqtt5_example: Mode 2
+I (67792) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (67802) mqtt5_example: 1
+I (67802) mqtt5_example: Received fan mode command: 2
+I (67802) mqtt5_example: Received fan mode command: 1
+I (67812) mqtt5_example: FAN MODE 1
+I (67992) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (67992) mqtt5_example: Mode 3
+I (67992) mqtt5_example: Received fan mode command: 3
+I (68402) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (68402) mqtt5_example: 1
+I (68402) mqtt5_example: Received fan mode command: 1
+I (68402) mqtt5_example: FAN MODE 1
+I (68912) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (68912) mqtt5_example: Mode 3
+I (68912) mqtt5_example: Received fan mode command: 3
+I (70242) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (70242) mqtt5_example: 1
+I (70242) mqtt5_example: Received fan mode command: 1
+I (70252) mqtt5_example: FAN MODE 1
+I (71402) mqtt5_example: Published temperature 24.60 *C
+I (71402) mqtt5_example: Published humidity 97.00 %
+I (71802) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (71802) mqtt5_example: Mode 3
+I (71802) mqtt5_example: Received fan mode command: 3
+I (72212) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (72212) mqtt5_example: 1
+I (72212) mqtt5_example: Received fan mode command: 1
+I (72212) mqtt5_example: FAN MODE 1
+I (72402) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (72402) mqtt5_example: 1
+I (72402) mqtt5_example: Received fan mode command: 1
+I (72412) mqtt5_example: FAN MODE 1
+I (72622) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (72622) mqtt5_example: Mode 3
+I (72622) mqtt5_example: Received fan mode command: 3
+I (76402) mqtt5_example: Published temperature 24.60 *C
+I (76402) mqtt5_example: Published humidity 97.10 %
+I (79882) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (79882) mqtt5_example: 1
+I (79892) mqtt5_example: Received fan mode command: 1
+I (79892) mqtt5_example: FAN MODE 1
+I (79992) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (79992) mqtt5_example: Mode 2
+I (79992) mqtt5_example: Received fan mode command: 2
+I (81402) mqtt5_example: Published temperature 24.60 *C
+I (81402) mqtt5_example: Published humidity 97.20 %
+I (81422) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (81422) mqtt5_example: 1
+I (81422) mqtt5_example: Received fan mode command: 1
+I (81422) mqtt5_example: FAN MODE 1
+I (81672) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (81672) mqtt5_example: Mode 3
+I (81672) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (81682) mqtt5_example: Mode 3
+I (81682) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (81692) mqtt5_example: 1
+I (81692) mqtt5_example: Received fan mode command: 3
+I (81692) mqtt5_example: Received fan mode command: 3
+I (81702) mqtt5_example: Received fan mode command: 1
+I (81702) mqtt5_example: FAN MODE 1
+I (81722) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (81722) mqtt5_example: Mode 3
+I (81722) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (81732) mqtt5_example: 1
+I (81732) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (81742) mqtt5_example: Mode 3
+I (81742) mqtt5_example: Received fan mode command: 3
+I (81742) mqtt5_example: Received fan mode command: 1
+I (81752) mqtt5_example: FAN MODE 1
+I (81752) mqtt5_example: Received fan mode command: 3
+I (82032) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (82042) mqtt5_example: 1
+I (82042) mqtt5_example: Received fan mode command: 1
+I (82042) mqtt5_example: FAN MODE 1
+I (86402) mqtt5_example: Published temperature 24.60 *C
+I (86402) mqtt5_example: Published humidity 97.30 %
+I (91402) mqtt5_example: Published temperature 24.60 *C
+I (91402) mqtt5_example: Published humidity 97.40 %
+I (96402) mqtt5_example: Published temperature 24.60 *C
+I (96402) mqtt5_example: Published humidity 97.50 %
+I (96452) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (96462) mqtt5_example: Mode 2
+I (96462) mqtt5_example: Received fan mode command: 2
+I (97232) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (97232) mqtt5_example: Mode 3
+I (97232) mqtt5_example: Received fan mode command: 3
+I (97322) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (97322) mqtt5_example: Mode 2
+I (97322) mqtt5_example: Received fan mode command: 2
+I (97582) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (97592) mqtt5_example: 1
+I (97592) mqtt5_example: Received fan mode command: 1
+I (97592) mqtt5_example: FAN MODE 1
+I (98202) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (98202) mqtt5_example: Mode 2
+I (98202) mqtt5_example: Received fan mode command: 2
+I (98362) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (98362) mqtt5_example: Mode 3
+I (98362) mqtt5_example: Received fan mode command: 3
+I (99022) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (99022) mqtt5_example: Mode 2
+I (99022) mqtt5_example: Received fan mode command: 2
+I (99122) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (99122) mqtt5_example: 1
+I (99122) mqtt5_example: Received fan mode command: 1
+I (99122) mqtt5_example: FAN MODE 1
+I (100452) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (100452) mqtt5_example: Mode 2
+I (100452) mqtt5_example: Received fan mode command: 2
+I (101072) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (101072) mqtt5_example: Mode 3
+I (101072) mqtt5_example: Received fan mode command: 3
+I (101272) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (101272) mqtt5_example: Mode 2
+I (101272) mqtt5_example: Received fan mode command: 2
+I (101402) mqtt5_example: Published temperature 24.60 *C
+I (101402) mqtt5_example: Published humidity 97.50 %
+I (101522) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (101522) mqtt5_example: 1
+I (101522) mqtt5_example: Received fan mode command: 1
+I (101522) mqtt5_example: FAN MODE 1
+I (106402) mqtt5_example: Published temperature 24.50 *C
+I (106402) mqtt5_example: Published humidity 97.80 %
+I (111402) mqtt5_example: Published temperature 24.50 *C
+I (111402) mqtt5_example: Published humidity 97.80 %
+I (116402) mqtt5_example: Published temperature 24.50 *C
+I (116402) mqtt5_example: Published humidity 97.90 %
+I (121402) mqtt5_example: Published temperature 24.50 *C
+I (121402) mqtt5_example: Published humidity 98.00 %
+I (126402) mqtt5_example: Published temperature 24.50 *C
+I (126402) mqtt5_example: Published humidity 98.10 %
+I (126872) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=2
+I (126882) mqtt5_example: Mode 2
+I (126882) mqtt5_example: Received fan mode command: 2
+I (128302) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=3
+I (128302) mqtt5_example: Mode 3
+I (128312) mqtt5_example: Received fan mode command: 3
+I (129532) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=1
+I (129532) mqtt5_example: 1
+I (129532) mqtt5_example: Received fan mode command: 1
+I (129542) mqtt5_example: FAN MODE 1
+I (131402) mqtt5_example: Published temperature 24.50 *C
+I (131402) mqtt5_example: Published humidity 98.10 %
+I (136402) mqtt5_example: Published temperature 24.50 *C
+I (136402) mqtt5_example: Published humidity 98.20 %
+I (141402) mqtt5_example: Published temperature 24.40 *C
+I (141402) mqtt5_example: Published humidity 98.30 %
+I (143262) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/state
+DATA=OFF
+I (143262) mqtt5_example: Turning Off FAN
+I (143262) mqtt5_example: Received fan mode command: 0
+I (143472) mqtt5_example: MQTT_EVENT_DATA
+TOPIC=iot/fan/speed
+DATA=0
+I (143472) mqtt5_example: Fan OFF
+I (143472) mqtt5_example: Received fan mode command: 0
+I (146402) mqtt5_example: Published temperature 24.40 *C
+I (146402) mqtt5_example: Published humidity 98.50 %
+I (151402) mqtt5_example: Published temperature 24.40 *C
+I (151402) mqtt5_example: Published humidity 98.60 %
+I (156402) mqtt5_example: Published temperature 24.40 *C
+I (156402) mqtt5_example: Published humidity 98.60 %
+I (161402) mqtt5_example: Published temperature 24.40 *C
+I (161402) mqtt5_example: Published humidity 98.60 %
+I (166402) mqtt5_example: Published temperature 24.30 *C
+I (166402) mqtt5_example: Published humidity 98.70 %
+I (171402) mqtt5_example: Published temperature 24.30 *C
+I (171402) mqtt5_example: Published humidity 98.70 %
+I (176402) mqtt5_example: Published temperature 24.30 *C
+I (176402) mqtt5_example: Published humidity 98.90 %
+I (181402) mqtt5_example: Published temperature 24.30 *C
+I (181402) mqtt5_example: Published humidity 98.90 %
+I (186402) mqtt5_example: Published temperature 24.30 *C
+I (186402) mqtt5_example: Published humidity 99.00 %
+I (191402) mqtt5_example: Published temperature 24.30 *C
+I (191402) mqtt5_example: Published humidity 99.00 %
+I (196402) mqtt5_example: Published temperature 24.30 *C
+I (196402) mqtt5_example: Published humidity 99.10 %
+I (201402) mqtt5_example: Published temperature 24.30 *C
+I (201402) mqtt5_example: Published humidity 99.20 %
+I (206402) mqtt5_example: Published temperature 24.20 *C
+I (206402) mqtt5_example: Published humidity 99.30 %
+I (211402) mqtt5_example: Published temperature 24.20 *C
+I (211402) mqtt5_example: Published humidity 99.30 %
+I (216402) mqtt5_example: Published temperature 24.20 *C
+I (216402) mqtt5_example: Published humidity 99.40 %
+I (221402) mqtt5_example: Published temperature 24.20 *C
+I (221402) mqtt5_example: Published humidity 99.40 %
+I (226402) mqtt5_example: Published temperature 24.20 *C
+I (226402) mqtt5_example: Published humidity 99.50 %
+I (231402) mqtt5_example: Published temperature 24.20 *C
+I (231402) mqtt5_example: Published humidity 99.60 %
+I (236402) mqtt5_example: Published temperature 24.20 *C
+I (236402) mqtt5_example: Published humidity 99.60 %
+I (241402) mqtt5_example: Published temperature 24.20 *C
+I (241402) mqtt5_example: Published humidity 99.60 %
+I (246402) mqtt5_example: Published temperature 24.20 *C
+I (246402) mqtt5_example: Published humidity 99.60 %
+I (251402) mqtt5_example: Published temperature 24.20 *C
+I (251402) mqtt5_example: Published humidity 99.70 %
+I (256402) mqtt5_example: Published temperature 24.20 *C
+I (256402) mqtt5_example: Published humidity 99.80 %
+I (261402) mqtt5_example: Published temperature 24.20 *C
+I (261402) mqtt5_example: Published humidity 99.80 %
+I (266402) mqtt5_example: Published temperature 24.20 *C
+I (266402) mqtt5_example: Published humidity 99.80 %
+I (271402) mqtt5_example: Published temperature 24.20 *C
+I (271402) mqtt5_example: Published humidity 99.90 %
+I (276402) mqtt5_example: Published temperature 24.10 *C
+I (276402) mqtt5_example: Published humidity 99.90 %
+I (281402) mqtt5_example: Published temperature 24.10 *C
+I (281402) mqtt5_example: Published humidity 100.00 %
+I (286402) mqtt5_example: Published temperature 24.10 *C
+I (286402) mqtt5_example: Published humidity 99.90 %
+I (291402) mqtt5_example: Published temperature 24.10 *C
+I (291402) mqtt5_example: Published humidity 100.00 %
+I (296402) mqtt5_example: Published temperature 24.10 *C
+I (296402) mqtt5_example: Published humidity 100.00 %
+I (301402) mqtt5_example: Published temperature 24.10 *C
+I (301402) mqtt5_example: Published humidity 100.00 %
+I (306402) mqtt5_example: Published temperature 24.10 *C
+I (306402) mqtt5_example: Published humidity 100.00 %
+I (311402) mqtt5_example: Published temperature 24.10 *C
+I (311402) mqtt5_example: Published humidity 100.00 %
+I (316402) mqtt5_example: Published temperature 24.10 *C
+I (316402) mqtt5_example: Published humidity 100.00 %
+I (321402) mqtt5_example: Published temperature 24.10 *C
+I (321402) mqtt5_example: Published humidity 100.00 %

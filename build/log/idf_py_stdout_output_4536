@@ -1,0 +1,216 @@
+Command: ninja monitor\
+[0/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\ADMIN\esp\v5.5.1\esp-idf\components\esptool_py && C:\Users\ADMIN\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/ADMIN/esp/v5.5.1/esp-idf -D SERIAL_TOOL=C:/Users/ADMIN/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;-m;esp_idf_monitor -D SERIAL_TOOL_ARGS=--toolchain-prefix;riscv32-esp-elf-;;--target;esp32c3;;--revision;3;;--decode-panic;backtrace;;E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.elf -D WORKING_DIRECTORY=E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build -P run_serial_tool.cmake"
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+I (30) boot: ESP-IDF v5.5.1 2nd stage bootloader
+I (30) boot: compile time Dec 17 2025 20:58:04
+I (30) boot: chip revision: v0.4
+I (30) boot: efuse block revision: v1.3
+I (34) boot.esp32c3: SPI Speed      : 80MHz
+I (38) boot.esp32c3: SPI Mode       : DIO
+I (41) boot.esp32c3: SPI Flash Size : 2MB
+I (45) boot: Enabling RNG early entropy source...
+I (50) boot: Partition Table:
+I (52) boot: ## Label            Usage          Type ST Offset   Length
+I (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (72) boot:  2 factory          factory app      00 00 00010000 00177000
+I (78) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=1f90ch (129292) map
+I (110) esp_image: segment 1: paddr=0002f934 vaddr=3fc94600 size=006e4h (  1764) load
+I (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=b6a20h (748064) map
+I (232) esp_image: segment 3: paddr=000e6a48 vaddr=3fc94ce4 size=026f8h (  9976) load
+I (235) esp_image: segment 4: paddr=000e9148 vaddr=40380000 size=14554h ( 83284) load
+I (252) esp_image: segment 5: paddr=000fd6a4 vaddr=50000000 size=00020h (    32) load
+I (258) boot: Loaded app from partition at offset 0x10000
+I (258) boot: Disabling RNG early entropy source...
+I (269) cpu_start: Unicore app
+I (278) cpu_start: Pro cpu start user code
+I (278) cpu_start: cpu freq: 160000000 Hz
+I (278) app_init: Application information:
+I (278) app_init: Project name:     fan_idf
+I (282) app_init: App version:      a68990c-dirty
+I (286) app_init: Compile time:     Dec 17 2025 20:57:47
+I (291) app_init: ELF file SHA256:  f43ebb8cf...
+I (295) app_init: ESP-IDF:          v5.5.1
+I (299) efuse_init: Min chip rev:     v0.3
+I (303) efuse_init: Max chip rev:     v1.99 
+I (307) efuse_init: Chip rev:         v0.4
+I (311) heap_init: Initializing. RAM available for dynamic allocation:
+I (317) heap_init: At 3FC9BCF0 len 00024310 (144 KiB): RAM
+I (322) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM
+I (328) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM
+I (334) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM
+I (341) spi_flash: detected chip: generic
+I (343) spi_flash: flash io: dio
+W (346) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (359) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (372) main_task: Started on CPU0
+I (382) main_task: Calling app_main()
+I (392) pp: pp rom version: 9387209
+I (392) net80211: net80211 rom version: 9387209
+I (402) wifi:wifi driver task: 3fca4960, prio:23, stack:6656, core=0
+I (402) wifi:wifi firmware version: 14da9b7
+I (402) wifi:wifi certification version: v7.0
+I (402) wifi:config NVS flash: enabled
+I (412) wifi:config nano formatting: disabled
+I (412) wifi:Init data frame dynamic rx buffer num: 32
+I (412) wifi:Init static rx mgmt buffer num: 5
+I (422) wifi:Init management short buffer num: 32
+I (422) wifi:Init dynamic tx buffer num: 32
+I (432) wifi:Init static tx FG buffer num: 2
+I (432) wifi:Init static rx buffer size: 1600
+I (442) wifi:Init static rx buffer num: 10
+I (442) wifi:Init dynamic rx buffer num: 32
+I (442) wifi_init: rx ba win: 6
+I (452) wifi_init: accept mbox: 6
+I (452) wifi_init: tcpip mbox: 32
+I (452) wifi_init: udp mbox: 6
+I (452) wifi_init: tcp mbox: 6
+I (462) wifi_init: tcp tx win: 5760
+I (462) wifi_init: tcp rx win: 5760
+I (462) wifi_init: tcp mss: 1440
+I (472) wifi_init: WiFi IRAM OP enabled
+I (472) wifi_init: WiFi RX IRAM OP enabled
+W (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+I (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21
+I (532) wifi:mode : sta (f0:f5:bd:fb:0f:80)
+I (532) wifi:enable tsf
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (542) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (542) wifi:state: init -> auth (0xb0)
+I (572) wifi:state: auth -> assoc (0x0)
+I (582) wifi:state: assoc -> run (0x10)
+I (662) wifi:connected with Son Tra, aid = 14, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6
+I (662) wifi:security: WPA2-PSK, phy: bgn, rssi: -37
+I (672) wifi:pm start, type: 1
+
+I (672) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (682) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+WiFi CONNECTED
+I (752) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (752) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (1722) esp_netif_handlers: sta ip: 192.168.87.44, mask: 255.255.255.0, gw: 192.168.87.165
+Wifi got IP...
+
+I (1722) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883
+I (1732) mqtt5_example: Other event id:7
+I (1742) main_task: Returned from app_main()
+I (1882) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64
+I (5152) mqtt5_example: MQTT_EVENT_CONNECTED
+I (5162) mqtt5_example: sent subscribe successful, msg_id=60974
+I (5162) mqtt5_example: Published temperature 25*C
+I (5562) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=60974, return code=0x00 
+I (5972) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=26059, return code=0x00 
+I (5982) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=39426, return code=0x00 
+I (7162) mqtt5_example: Published temperature 25*C
+I (9162) mqtt5_example: Published temperature 25*C
+I (11162) mqtt5_example: Published temperature 25*C
+I (13162) mqtt5_example: Published temperature 25*C
+I (15162) mqtt5_example: Published temperature 25*C
+I (17162) mqtt5_example: Published temperature 25*C
+I (19162) mqtt5_example: Published temperature 25*C
+I (21162) mqtt5_example: Published temperature 25*C
+I (23162) mqtt5_example: Published temperature 25*C
+I (25162) mqtt5_example: Published temperature 25*C
+I (27162) mqtt5_example: Published temperature 25*C
+I (29162) mqtt5_example: Published temperature 25*C
+I (31162) mqtt5_example: Published temperature 25*C
+I (33162) mqtt5_example: Published temperature 25*C
+I (35162) mqtt5_example: Published temperature 25*C
+I (37162) mqtt5_example: Published temperature 25*C
+I (39162) mqtt5_example: Published temperature 25*C
+I (41162) mqtt5_example: Published temperature 25*C
+I (43162) mqtt5_example: Published temperature 25*C
+I (45162) mqtt5_example: Published temperature 25*C
+I (47162) mqtt5_example: Published temperature 25*C
+I (49162) mqtt5_example: Published temperature 25*C
+I (51162) mqtt5_example: Published temperature 25*C
+I (53162) mqtt5_example: Published temperature 25*C
+I (55162) mqtt5_example: Published temperature 25*C
+I (57162) mqtt5_example: Published temperature 25*C
+I (59162) mqtt5_example: Published temperature 25*C
+I (61162) mqtt5_example: Published temperature 25*C
+I (63162) mqtt5_example: Published temperature 25*C
+I (65162) mqtt5_example: Published temperature 25*C
+I (67162) mqtt5_example: Published temperature 25*C
+I (69162) mqtt5_example: Published temperature 25*C
+I (71162) mqtt5_example: Published temperature 25*C
+I (73162) mqtt5_example: Published temperature 25*C
+I (75162) mqtt5_example: Published temperature 25*C
+I (77162) mqtt5_example: Published temperature 25*C
+I (79162) mqtt5_example: Published temperature 25*C
+I (81162) mqtt5_example: Published temperature 25*C
+I (83162) mqtt5_example: Published temperature 25*C
+I (85162) mqtt5_example: Published temperature 25*C
+I (87162) mqtt5_example: Published temperature 25*C
+I (89162) mqtt5_example: Published temperature 25*C
+I (91162) mqtt5_example: Published temperature 25*C
+I (93162) mqtt5_example: Published temperature 25*C
+I (95162) mqtt5_example: Published temperature 25*C
+I (97162) mqtt5_example: Published temperature 25*C
+I (99162) mqtt5_example: Published temperature 25*C
+I (101162) mqtt5_example: Published temperature 25*C
+I (103162) mqtt5_example: Published temperature 25*C
+I (105162) mqtt5_example: Published temperature 25*C
+I (107162) mqtt5_example: Published temperature 25*C
+I (109162) mqtt5_example: Published temperature 25*C
+I (111162) mqtt5_example: Published temperature 25*C
+I (113162) mqtt5_example: Published temperature 25*C
+I (115162) mqtt5_example: Published temperature 25*C
+I (117162) mqtt5_example: Published temperature 25*C
+I (119162) mqtt5_example: Published temperature 25*C
+I (121162) mqtt5_example: Published temperature 25*C
+I (123162) mqtt5_example: Published temperature 25*C
+I (125162) mqtt5_example: Published temperature 25*C
+I (127162) mqtt5_example: Published temperature 25*C
+I (129162) mqtt5_example: Published temperature 25*C
+I (131162) mqtt5_example: Published temperature 25*C
+I (133162) mqtt5_example: Published temperature 25*C
+I (135162) mqtt5_example: Published temperature 25*C
+I (137162) mqtt5_example: Published temperature 25*C
+I (139162) mqtt5_example: Published temperature 25*C
+I (141162) mqtt5_example: Published temperature 25*C
+I (143162) mqtt5_example: Published temperature 25*C
+I (145162) mqtt5_example: Published temperature 25*C
+I (147162) mqtt5_example: Published temperature 25*C
+I (149162) mqtt5_example: Published temperature 25*C
+I (151162) mqtt5_example: Published temperature 25*C
+I (153162) mqtt5_example: Published temperature 25*C
+I (155162) mqtt5_example: Published temperature 25*C
+I (157162) mqtt5_example: Published temperature 25*C
+I (159162) mqtt5_example: Published temperature 25*C
+I (161162) mqtt5_example: Published temperature 25*C
+I (163162) mqtt5_example: Published temperature 25*C
+I (165162) mqtt5_example: Published temperature 25*C
+I (167162) mqtt5_example: Published temperature 25*C
+I (169162) mqtt5_example: Published temperature 25*C
+I (171162) mqtt5_example: Published temperature 25*C
+I (173162) mqtt5_example: Published temperature 25*C
+I (175162) mqtt5_example: Published temperature 25*C
+I (177162) mqtt5_example: Published temperature 25*C
+I (179162) mqtt5_example: Published temperature 25*C
+I (181162) mqtt5_example: Published temperature 25*C
+I (183162) mqtt5_example: Published temperature 25*C
+I (185162) mqtt5_example: Published temperature 25*C
+I (187162) mqtt5_example: Published temperature 25*C
+I (189162) mqtt5_example: Published temperature 25*C
+I (191162) mqtt5_example: Published temperature 25*C
+I (193162) mqtt5_example: Published temperature 25*C
+I (195162) mqtt5_example: Published temperature 25*C
+I (197162) mqtt5_example: Published temperature 25*C
+I (199162) mqtt5_example: Published temperature 25*C
+I (201162) mqtt5_example: Published temperature 25*C
+I (203162) mqtt5_example: Published temperature 25*C
+I (205162) mqtt5_example: Published temperature 25*C
+I (207162) mqtt5_example: Published temperature 25*C
+I (209162) mqtt5_example: Published temperature 25*C
+I (211162) mqtt5_example: Published temperature 25*C
