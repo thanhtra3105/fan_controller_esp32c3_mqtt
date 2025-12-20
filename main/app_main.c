@@ -24,10 +24,14 @@
 #include "esp_adc/adc_oneshot.h"
 #include "dht22.h"
 
-#define FAN_MODE1_PIN GPIO_NUM_4
+#define FAN_MODE3_PIN GPIO_NUM_4
 #define FAN_MODE2_PIN GPIO_NUM_5
-#define FAN_MODE3_PIN GPIO_NUM_6
+#define FAN_MODE1_PIN GPIO_NUM_6
 #define FAN_OCSILLATION_PIN GPIO_NUM_7
+#define BUZZER_PIN GPIO_NUM_9
+#define LED_ON_PIN GPIO_NUM_2
+#define LED_OFF_PIN GPIO_NUM_3
+
 typedef enum
 {
     FAN_MODE_OFF = 0,
@@ -174,6 +178,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
         msg_id = esp_mqtt_client_subscribe(client, "iot/fan/state", 0);
         esp_mqtt_client_subscribe(client, "iot/fan/speed", 0);
+        esp_mqtt_client_subscribe(client, "iot/fan/osc", 0);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
         xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 6, NULL);
         break;
@@ -207,7 +212,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
         }
-        if (strncmp(event->topic, "iot/fan/ocs", event->topic_len) == 0)
+        if (strncmp(event->topic, "iot/fan/osc", event->topic_len) == 0)
         {
             if (strncmp(event->data, "ON", event->data_len) == 0)
             {
@@ -250,32 +255,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
                 fan_mode cmd = FAN_MODE_OFF;
                 xQueueSend(gpio_queue, &cmd, portMAX_DELAY);
             }
-            // gpio_set_level(4, 0);
-            // gpio_set_level(5, 0);
-            // gpio_set_level(6, 0);
-            // ESP_LOGI(TAG, "Received fan control command: %.*s", event->data_len, event->data);
-            // if (strncmp(event->data, "mode_1", event->data_len) == 0)
-            // {
-            //     ESP_LOGI(TAG, "Turning on fan MODE 1");
-            //     gpio_set_level(4, 1);
-            // }
-            // else if (strncmp(event->data, "mode_2", event->data_len) == 0)
-            // {
-            //     ESP_LOGI(TAG, "Turn on fan MODE 2");
-            //     gpio_set_level(5, 1);
-            // }
-            // else if (strncmp(event->data, "mode_3", event->data_len) == 0)
-            // {
-            //     ESP_LOGI(TAG, "Turn on fan MODE 3");
-            //     gpio_set_level(6, 1);
-            // }
-            // else
-            // {
-            //     ESP_LOGI(TAG, "Turning fan OFF");
-            //     gpio_set_level(4, 0);
-            //     gpio_set_level(5, 0);
-            //     gpio_set_level(6, 0);
-            // }
         }
         break;
 
@@ -344,39 +323,71 @@ void gpio_task(void *pvParemeters)
     while (1)
     {
         xQueueReceive(gpio_queue, &cmd, portMAX_DELAY);
+        gpio_set_level(BUZZER_PIN, 0);
+
         ESP_LOGI(TAG, "Received fan mode command: %d", cmd);
-        switch (cmd)
+        if (cmd != FAN_MODE_OFF)
         {
-        case FAN_MODE_1:
-            ESP_LOGI(TAG, "FAN MODE 1");
-            gpio_set_level(FAN_MODE2_PIN, 0);
-            gpio_set_level(FAN_MODE3_PIN, 0);
-            gpio_set_level(FAN_MODE1_PIN, 1);
-            break;
-        case FAN_MODE_2:
-            gpio_set_level(FAN_MODE1_PIN, 0);
-            gpio_set_level(FAN_MODE3_PIN, 0);
-            gpio_set_level(FAN_MODE2_PIN, 1);
-            break;
-        case FAN_MODE_3:
-            gpio_set_level(FAN_MODE1_PIN, 0);
-            gpio_set_level(FAN_MODE2_PIN, 0);
-            gpio_set_level(FAN_MODE3_PIN, 1);
-            break;
-        case FAN_MODE_OCSSILATION:
-            gpio_set_level(FAN_OCSILLATION_PIN, 1);
-            break;
-        case FAN_MODE_OFF_OCSSILATION:
-            gpio_set_level(FAN_OCSILLATION_PIN, 0);
-            break;
-        case FAN_MODE_OFF:
-            gpio_set_level(FAN_MODE1_PIN, 0);
-            gpio_set_level(FAN_MODE2_PIN, 0);
-            gpio_set_level(FAN_MODE3_PIN, 0);
-            gpio_set_level(FAN_OCSILLATION_PIN, 0);
+            switch (cmd)
+            {
+            case FAN_MODE_1:
+                ESP_LOGI(TAG, "FAN MODE 1");
+                gpio_set_level(FAN_MODE2_PIN, 1);
+                gpio_set_level(FAN_MODE3_PIN, 1);
+                gpio_set_level(FAN_MODE1_PIN, 0);
+                break;
+            case FAN_MODE_2:
+                gpio_set_level(FAN_MODE1_PIN, 1);
+                gpio_set_level(FAN_MODE3_PIN, 1);
+                gpio_set_level(FAN_MODE2_PIN, 0);
+                break;
+            case FAN_MODE_3:
+                gpio_set_level(FAN_MODE1_PIN, 1);
+                gpio_set_level(FAN_MODE2_PIN, 1);
+                gpio_set_level(FAN_MODE3_PIN, 0);
+                break;
+            case FAN_MODE_OCSSILATION:
+                gpio_set_level(FAN_OCSILLATION_PIN, 1);
+                break;
+            case FAN_MODE_OFF_OCSSILATION:
+                gpio_set_level(FAN_OCSILLATION_PIN, 0);
+                break;
+            default:
+                break;
+            }
         }
+        else
+        {
+            gpio_set_level(FAN_MODE1_PIN, 1);
+            gpio_set_level(FAN_MODE2_PIN, 1);
+            gpio_set_level(FAN_MODE3_PIN, 1);
+            gpio_set_level(FAN_OCSILLATION_PIN, 1);
+            gpio_set_level(LED_OFF_PIN, 0); // led off ON
+            gpio_set_level(LED_ON_PIN, 1);  // led on OFF
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(50));
+        gpio_set_level(LED_OFF_PIN, 1);
+        gpio_set_level(LED_ON_PIN, 0);
+        gpio_set_level(BUZZER_PIN, 1);
     }
 }
+
+void temp_task(void *pv)
+{
+    float temp = 0.0;
+    float humi = 0.0;
+    while (1)
+    {
+        if (dht22_read(&temp, &humi))
+        {
+            xQueueSend(temp_queue, &temp, portMAX_DELAY);
+            xQueueSend(humi_queue, &humi, portMAX_DELAY);
+        }
+        vTaskDelay(pdMS_TO_TICKS(5000));
+    }
+}
+
 void gpio_input_config()
 {
     gpio_config_t gpio_input = {
@@ -394,12 +405,29 @@ void gpio_output_config()
     gpio_config_t gpio_output = {
         .intr_type = GPIO_INTR_DISABLE,
         .mode = GPIO_MODE_OUTPUT,
-        .pin_bit_mask = 1ULL << FAN_MODE1_PIN | 1ULL << FAN_MODE2_PIN | 1ULL << FAN_MODE3_PIN | 1ULL << FAN_OCSILLATION_PIN, // gpio 4,5,6,7
+        .pin_bit_mask = 1ULL << FAN_MODE1_PIN | 1ULL << FAN_MODE2_PIN | 1ULL << FAN_MODE3_PIN | 1ULL << FAN_OCSILLATION_PIN | 1ULL << LED_OFF_PIN | 1ULL << LED_ON_PIN, // gpio 4,5,6,7
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+    };
+
+    gpio_config_t buzzer_config = {
+        .intr_type = GPIO_INTR_DISABLE,
+        .mode = GPIO_MODE_OUTPUT_OD, // open drain mode
+        .pin_bit_mask = 1ULL << BUZZER_PIN,
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
         .pull_up_en = GPIO_PULLUP_DISABLE,
     };
 
     gpio_config(&gpio_output);
+    gpio_config(&buzzer_config);
+    // level 1 to turn off all
+    gpio_set_level(BUZZER_PIN, 1);
+    gpio_set_level(LED_OFF_PIN, 1);
+    gpio_set_level(LED_ON_PIN, 1);
+    gpio_set_level(FAN_MODE1_PIN, 1);
+    gpio_set_level(FAN_MODE2_PIN, 1);
+    gpio_set_level(FAN_MODE3_PIN, 1);
+    gpio_set_level(FAN_OCSILLATION_PIN, 1);
 }
 
 void adc_config()
@@ -417,20 +445,6 @@ void adc_config()
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_3, &config));
 }
 
-void temp_task(void *pv)
-{
-    float temp = 0.0;
-    float humi = 0.0;
-    while (1)
-    {
-        if (dht22_read(&temp, &humi))
-        {
-            xQueueSend(temp_queue, &temp, portMAX_DELAY);
-            xQueueSend(humi_queue, &humi, portMAX_DELAY);
-        }
-        vTaskDelay(pdMS_TO_TICKS(5000));
-    }
-}
 void app_main(void)
 {
     gpio_output_config();

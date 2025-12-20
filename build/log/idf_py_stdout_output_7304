@@ -1,0 +1,30 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\esp-idf\esptool_py && C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: In function 'adc_config':
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:441:9: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+  441 |         .atten = ADC_ATTEN_DB_11,
+      |         ^
+In file included from E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:23:
+C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c: At top level:
+E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main/app_main.c:137:13: warning: 'log_error_if_nonzero' defined but not used [-Wunused-function]
+  137 | static void log_error_if_nonzero(const char *message, int error_code)
+      |             ^~~~~~~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable fan_idf.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.bin
+[9/9] C:\Windows\system32\cmd.exe /C "cd /D E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\esp-idf\esptool_py && C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/ADMIN/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/partition_table/partition-table.bin E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/fan_idf.bin"
+fan_idf.bin binary size 0xed930 bytes. Smallest app partition is 0x177000 bytes. 0x896d0 bytes (37%) free.
