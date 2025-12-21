@@ -1,0 +1,1963 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM14 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM14'
+xxx��xx��KESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 17 2025 20:58:04[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=1fb28h (129832) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=0002fb50 vaddr=3fc94e00 size=004c8h (  1224) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=b6c94h (748692) map[0m
+[0;32mI (233) esp_image: segment 3: paddr=000e6cbc vaddr=3fc952c8 size=02914h ( 10516) load[0m
+[0;32mI (235) esp_image: segment 4: paddr=000e95d8 vaddr=40380000 size=14c20h ( 85024) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000fe200 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (259) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (259) boot: Disabling RNG early entropy source...[0m
+[0;32mI (270) cpu_start: Unicore app[0m
+[0;32mI (278) cpu_start: Pro cpu start user code[0m
+[0;32mI (278) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (278) app_init: Application information:[0m
+[0;32mI (278) app_init: Project name:     fan_idf[0m
+[0;32mI (282) app_init: App version:      f6de718-dirty[0m
+[0;32mI (287) app_init: Compile time:     Dec 20 2025 21:28:01[0m
+[0;32mI (292) app_init: ELF file SHA256:  d915384fc...[0m
+[0;32mI (296) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (300) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (304) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (308) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (311) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (318) heap_init: At 3FC9C620 len 000239E0 (142 KiB): RAM[0m
+[0;32mI (323) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (329) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (335) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (341) spi_flash: detected chip: generic[0m
+[0;32mI (344) spi_flash: flash io: dio[0m
+[0;33mW (347) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (360) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (372) main_task: Started on CPU0[0m
+[0;32mI (382) main_task: Calling app_main()[0m
+[0;32mI (392) pp: pp rom version: 9387209[0m
+[0;32mI (392) net80211: net80211 rom version: 9387209[0m
+[0;32mI (402) wifi:wifi driver task: 3fca5af8, prio:23, stack:6656, core=0[0m
+[0;32mI (402) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (402) wifi:wifi certification version: v7.0[0m
+[0;32mI (402) wifi:config NVS flash: enabled[0m
+[0;32mI (412) wifi:config nano formatting: disabled[0m
+[0;32mI (412) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (422) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (422) wifi:Init management short buffer num: 32[0m
+[0;32mI (422) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (432) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (432) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (442) wifi:Init static rx buffer num: 10[0m
+[0;32mI (442) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (452) wifi_init: accept mbox: 6[0m
+[0;32mI (452) wifi_init: tcpip mbox: 32[0m
+[0;32mI (452) wifi_init: udp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp tx win: 5760[0m
+[0;32mI (462) wifi_init: tcp rx win: 5760[0m
+[0;32mI (462) wifi_init: tcp mss: 1440[0m
+[0;32mI (472) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (472) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (532) wifi:mode : sta (f0:f5:bd:fb:0f:80)[0m
+[0;32mI (532) wifi:enable tsf[0m
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (542) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (542) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (562) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (572) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (662) wifi:connected with Son Tra, aid = 6, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (662) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (662) wifi:pm start, type: 1[0m
+
+[0;32mI (662) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (672) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (722) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (722) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1732) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (1732) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (1742) mqtt5_example: Other event id:7[0m
+[0;32mI (1752) main_task: Returned from app_main()[0m
+[0;32mI (1972) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4732) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (4732) mqtt5_example: sent subscribe successful, msg_id=12951[0m
+[0;32mI (4742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (5252) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=12951, return code=0x00 [0m
+[0;32mI (5662) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=2996, return code=0x00 [0m
+[0;32mI (5662) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=49234, return code=0x00 [0m
+[0;32mI (5672) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=5606, return code=0x00 [0m
+[0;32mI (9742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (14742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (19742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (24742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (29742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (34742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (39742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (44742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (49742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (54742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (59742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (64742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (69742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (74742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (79742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (84742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (89742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (94742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (99742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (104742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (109742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (114742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (119742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (124742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (129742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (134742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (139742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (144742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (149742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (154742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (159742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (164742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (169742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (174742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (179742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (184742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (189742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (194742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (199742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (204742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (209742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (214742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (219742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (224742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (229742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (234742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (239742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (244742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (249742) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (254742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (259742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (264742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (269742) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (652) wifi:connected with Son Tra, aid = 7, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (652) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (652) wifi:pm start, type: 1[0m
+
+[0;32mI (652) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (662) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (742) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (742) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1262) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1702) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (1702) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (1712) mqtt5_example: Other event id:7[0m
+[0;32mI (1722) main_task: Returned from app_main()[0m
+[0;32mI (5152) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5152) mqtt5_example: sent subscribe successful, msg_id=32946[0m
+[0;32mI (5162) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (5562) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=32946, return code=0x00 [0m
+[0;32mI (5972) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=64263, return code=0x00 [0m
+[0;32mI (5982) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=8755, return code=0x00 [0m
+[0;32mI (5982) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=13312, return code=0x00 [0m
+[0;32mI (10162) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (15162) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (20162) mqtt5_example: Published temperature 25.70 *C[0m
+WiFi lost connection
+Retrying to Connect...
+[0;32mI (2982) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2982) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2992) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3012) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3052) wifi:connected with Son Tra, aid = 8, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (3052) wifi:security: WPA2-PSK, phy: bgn, rssi: -38[0m
+[0;32mI (3052) wifi:pm start, type: 1[0m
+
+[0;32mI (3052) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3062) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (3092) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3092) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4102) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (4102) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (4112) mqtt5_example: Other event id:7[0m
+[0;32mI (4122) main_task: Returned from app_main()[0m
+[0;32mI (4162) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (6792) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6792) mqtt5_example: sent subscribe successful, msg_id=53908[0m
+[0;32mI (6802) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (7202) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=53908, return code=0x00 [0m
+[0;32mI (7422) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=13278, return code=0x00 [0m
+[0;32mI (7422) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=1227, return code=0x00 [0m
+[0;32mI (7432) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=46714, return code=0x00 [0m
+[0;32mI (11742) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (11802) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (12332) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (12332) mqtt5_example: Turning Off FAN[0m
+[0;32mI (12332) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (12332) mqtt5_example: FAN OFF[0m
+[0;32mI (12732) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (13242) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (13242) mqtt5_example: Turning Off FAN[0m
+[0;32mI (13242) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (13242) mqtt5_example: FAN OFF[0m
+[0;32mI (14062) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (14782) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (14782) mqtt5_example: Turning Off FAN[0m
+[0;32mI (14782) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (14782) mqtt5_example: FAN OFF[0m
+[0;32mI (15392) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (16802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (16822) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (16822) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (16822) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (17642) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (17652) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (17652) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (18672) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (18672) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (18672) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (20102) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (20102) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (20102) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (20922) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (20922) mqtt5_example: 1[0m
+[0;32mI (20922) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (20922) mqtt5_example: FAN MODE 1[0m
+[0;32mI (21802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (26052) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (26052) mqtt5_example: Mode 2[0m
+[0;32mI (26052) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (26802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (27062) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (27062) mqtt5_example: Mode 3[0m
+[0;32mI (27062) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (27882) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (27882) mqtt5_example: Mode 2[0m
+[0;32mI (27882) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (28292) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (28292) mqtt5_example: 1[0m
+[0;32mI (28292) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (28292) mqtt5_example: FAN MODE 1[0m
+[0;32mI (29522) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (29522) mqtt5_example: Mode 2[0m
+[0;32mI (29522) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (30032) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (30032) mqtt5_example: Mode 3[0m
+[0;32mI (30032) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (30612) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (30612) mqtt5_example: Mode 2[0m
+[0;32mI (30612) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (30672) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (30672) mqtt5_example: 1[0m
+[0;32mI (30672) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (30672) mqtt5_example: FAN MODE 1[0m
+[0;32mI (31472) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (31472) mqtt5_example: Mode 2[0m
+[0;32mI (31472) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (31472) mqtt5_example: Mode 3[0m
+[0;32mI (31482) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (31532) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (31782) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (31782) mqtt5_example: Mode 2[0m
+[0;32mI (31782) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (31802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (31982) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (31982) mqtt5_example: 1[0m
+[0;32mI (31982) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (31992) mqtt5_example: FAN MODE 1[0m
+[0;32mI (32162) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (32162) mqtt5_example: Mode 2[0m
+[0;32mI (32162) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (32392) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (32392) mqtt5_example: Mode 3[0m
+[0;32mI (32392) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (32392) mqtt5_example: Mode 3[0m
+[0;32mI (32402) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (32452) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (32902) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (32902) mqtt5_example: Mode 2[0m
+[0;32mI (32902) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (32912) mqtt5_example: 1[0m
+[0;32mI (32912) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (32962) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (32962) mqtt5_example: FAN MODE 1[0m
+[0;32mI (33932) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (33932) mqtt5_example: 1[0m
+[0;32mI (33932) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (33932) mqtt5_example: 1[0m
+[0;32mI (33932) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (33942) mqtt5_example: 1[0m
+[0;32mI (33942) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (33952) mqtt5_example: 1[0m
+[0;32mI (33952) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (33952) mqtt5_example: FAN MODE 1[0m
+[0;32mI (34012) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (34012) mqtt5_example: FAN MODE 1[0m
+[0;32mI (34062) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (34062) mqtt5_example: FAN MODE 1[0m
+[0;32mI (34112) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (34112) mqtt5_example: FAN MODE 1[0m
+[0;32mI (34172) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (34172) mqtt5_example: 1[0m
+[0;32mI (34172) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (34172) mqtt5_example: FAN MODE 1[0m
+[0;32mI (34412) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (34412) mqtt5_example: 1[0m
+[0;32mI (34412) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (34412) mqtt5_example: FAN MODE 1[0m
+[0;32mI (36802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (41802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (46802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (51802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (56802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (61802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (66802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (71802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (76802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (81802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (86802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (91802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (96802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (98742) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (98742) mqtt5_example: Turning Off FAN[0m
+[0;32mI (98742) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (98752) mqtt5_example: FAN OFF[0m
+[0;32mI (101802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (106802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (111802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (116802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (121802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (126802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (131802) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (136802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (141802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (146802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (151802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (156802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (161802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (166802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (171802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (176802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (181802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (186802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (191802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (196802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (201802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (206802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (211802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (216802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (221802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (226802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (231802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (236802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (241802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (246802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (251802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (256802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (261802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (266802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (271802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (276802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (281802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (286802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (291802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (296802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (301802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (306802) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1772) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (1772) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (1782) mqtt5_example: Other event id:7[0m
+[0;32mI (1792) main_task: Returned from app_main()[0m
+[0;32mI (1852) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4582) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (4592) mqtt5_example: sent subscribe successful, msg_id=62893[0m
+[0;32mI (4592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (4892) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=62893, return code=0x00 [0m
+[0;32mI (5392) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=33968, return code=0x00 [0m
+[0;32mI (5402) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=4462, return code=0x00 [0m
+[0;32mI (5402) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=34885, return code=0x00 [0m
+[0;32mI (9592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (12262) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (12982) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (12982) mqtt5_example: 1[0m
+[0;32mI (12982) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (12982) mqtt5_example: FAN MODE 1[0m
+[0;32mI (14002) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (14002) mqtt5_example: Mode 2[0m
+[0;32mI (14002) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (14592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (15132) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (15132) mqtt5_example: Mode 3[0m
+[0;32mI (15132) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (19592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (24592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (29592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (34592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (39592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (44592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (49592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (54592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (59592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (64592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (69592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (74592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (79592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (83422) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (83422) mqtt5_example: Turning Off FAN[0m
+[0;32mI (83422) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (83432) mqtt5_example: FAN OFF[0m
+[0;32mI (84592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (89592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (94592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (99592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (104592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (109592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (114592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (119592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (124592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (129592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (134592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (139592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (144592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (149592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (154592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (159592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (164592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (169592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (174592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (179592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (184592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (189592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (194592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (199592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (204592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (209592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (214592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (219592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (224592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (229592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (234592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (239592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (244592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (249592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (254592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (259592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (264592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (269592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (274592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (279592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (284592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (289592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (294592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (299592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (304592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (309592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (314592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (319592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (324592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (329592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (334592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (339592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (344592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (349592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (354592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (359592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (364592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (369592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (374592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (379592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (384592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (389592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (394592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (399592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (404592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (409592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (414592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (419592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (424592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (429592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (434592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (439592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (444592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (449592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (454592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (459592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (464592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (469592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (474592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (479592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (484592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (489592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (494592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (499592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (504592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (509592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (514592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (519592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (524592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (529592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (534592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (539592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (544592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (549592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (554592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (559592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (564592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (569592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (574592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (579592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (584592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (589592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (594592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (599592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (604592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (609592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (614592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (619592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (624592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (629592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (634592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (639592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (644592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (649592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (654592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (659592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (664592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (669592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (674592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (679592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (684592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (689592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (694592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (699592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (704592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (709592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (714592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (719592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (724592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (729592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (734592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (739592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (744592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (749592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (754592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (759592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (764592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (769592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (774592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (779592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (784592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (789592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (794592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (799592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (804592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (809592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (814592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (819592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (824592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (829592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (834592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (839592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (844592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (849592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (854592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (859592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (864592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (869592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (874592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (879592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (884592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (889592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (894592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (899592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (904592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (909592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (914592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (919592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (924592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (929592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (934592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (939592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (944592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (949592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (954592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (959592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (964592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (969592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (974592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (979592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (984592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (989592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (994592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (999592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1004592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1009592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1014592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1019592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1024592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1029592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1034592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1039592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1044592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1049592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1054592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1059592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1064592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1069592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1074592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1079592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1084592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1089592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1094592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1099592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1104592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1109592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1114592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1119592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1124592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1129592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1134592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1139592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1144592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1149592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1154592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1159592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1164592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1169592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1174592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1179592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1184592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1189592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1194592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1199592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1204592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1209592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1214592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1219592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1224592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1229592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1234592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1239592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1244592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1249592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1254592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1259592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1264592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1269592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1274592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1279592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1284592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1289592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1294592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1299592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1304592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1309592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1314592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1319592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1324592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1329592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1334592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1339592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1344592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1349592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1354592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1359592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1364592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1369592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1374592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1379592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1384592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1389592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1394592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1399592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1404592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1409592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1414592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1419592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1424592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1429592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1434592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1439592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1444592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1449592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1454592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1459592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1464592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1469592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1474592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1479592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1484592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1489592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1494592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1499592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1504592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1509592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1514592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1519592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1524592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1529592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1534592) mqtt5_example: Published temperature 26.10 *C[0m
+[0;32mI (1539592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1544592) mqtt5_example: Published temperature 26.10 *C[0m
+[0;32mI (1549592) mqtt5_example: Published temperature 26.10 *C[0m
+[0;32mI (1554592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1559592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1564592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1569592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1574592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1579592) mqtt5_example: Published temperature 26.00 *C[0m
+[0;32mI (1584592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1589592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1594592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1599592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1604592) mqtt5_example: Published temperature 25.90 *C[0m
+[0;32mI (1609592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1614592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1619592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1624592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1629592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1634592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1639592) mqtt5_example: Published temperature 25.80 *C[0m
+[0;32mI (1644592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1649592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1654592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1659592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1664592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1669592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1674592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1679592) mqtt5_example: Published temperature 25.70 *C[0m
+[0;32mI (1684592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1689592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1694592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1699592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1704592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1709592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1714592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1719592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1724592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1729592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1734592) mqtt5_example: Published temperature 25.60 *C[0m
+[0;32mI (1739592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1744592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1749592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1754592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1759592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1764592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1769592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1774592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1779592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1784592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1789592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1794592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1799592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1804592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1809592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1814592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1819592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1824592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1829592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1834592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1839592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1844592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1849592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1854592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1859592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1864592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1869592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1874592) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (1879592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1884592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1889592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1894592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1899592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1904592) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (1909592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1914592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1919592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1924592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1929592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1934592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1939592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1944592) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (1949592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1954592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1959592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1964592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1969592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1974592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1979592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1984592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1989592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1994592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (1999592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (2004592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (2009592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2014592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2019592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (2024592) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (2029592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2034592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2039592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2044592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2049592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2054592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2059592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2064592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2069592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2074592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2079592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2084592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2089592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2094592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2099592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2104592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2109592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2114592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2119592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2124592) mqtt5_example: Published temperature 25.10 *C[0m
+[0;32mI (2129592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2134592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2139592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2144592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2149592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2154592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2159592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2164592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2169592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2174592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2179592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2184592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2189592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2194592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2199592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2204592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2209592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2214592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2219592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2224592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2229592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2234592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2239592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2244592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2249592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2254592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2259592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2264592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2269592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2274592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2279592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2284592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2289592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2294592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2299592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2304592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2309592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2314592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (2319592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2324592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2329592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2334592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2339592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2344592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2349592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2354592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2359592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2364592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2369592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2374592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2379592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2384592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2389592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2394592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2399592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2404592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2409592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2414592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2419592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2424592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2429592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2434592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2439592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2444592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2449592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2454592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2459592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2464592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2469592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2474592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2479592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2484592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2489592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2494592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2499592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2504592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2509592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2514592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2519592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2524592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2529592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2534592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2539592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2544592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2549592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2554592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2559592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2564592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2569592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2574592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2579592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2584592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2589592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2594592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2599592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2604592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2609592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2614592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2619592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2624592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2629592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2634592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2639592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2644592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2649592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2654592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2659592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2664592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2669592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2674592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2679592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2684592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2689592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2694592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2699592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2704592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2709592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2714592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2719592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2724592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2729592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2734592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2739592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2744592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2749592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2754592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2759592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2764592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2769592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2774592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2779592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2784592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2789592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2794592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2799592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2804592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2809592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2814592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2819592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2824592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2829592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2834592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2839592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2844592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2849592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2854592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2859592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2864592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2869592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2874592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2879592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2884592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2889592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2894592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2899592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2904592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2909592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2914592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2919592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2924592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2929592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2934592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2939592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2944592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2949592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2954592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2959592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2964592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2969592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2974592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2979592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2984592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2989592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (2994592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (2999592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3004592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (3009592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3014592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3019592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3024592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3029592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (3034592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3039592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3044592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3049592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3054592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3059592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3064592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3069592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3074592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3079592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3084592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3089592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3094592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3099592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3104592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3109592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3114592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3119592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3124592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3129592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3134592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3139592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3144592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3149592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3154592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3159592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3164592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3169592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3174592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3179592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3184592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3189592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3194592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3199592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3204592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3209592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3214592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3219592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3224592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3229592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3234592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3239592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3244592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3249592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3254592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3259592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3264592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3269592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3274592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3279592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3284592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3289592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3294592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3299592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3304592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3309592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3314592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3319592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3324592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3329592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3334592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3339592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3344592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3349592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3354592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3359592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3364592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3369592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3374592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3379592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3384592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3389592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3394592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3399592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3404592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3409592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3414592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3419592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3424592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3429592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3434592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3439592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3444592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3449592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3454592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3459592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3464592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3469592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3474592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3479592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3484592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3489592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3494592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3499592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3504592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3509592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3514592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3519592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3524592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3529592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3534592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3539592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3544592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3549592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3554592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3559592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3564592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3569592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3574592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3579592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3584592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3589592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3594592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3599592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3604592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3609592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3614592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3619592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3624592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3629592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3634592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3639592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3644592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3649592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3654592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3659592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3664592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3669592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3674592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3679592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (3684592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3689592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3694592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3699592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3704592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3709592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3714592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3719592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3724592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3729592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3734592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3739592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3744592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3749592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3754592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3759592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3764592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3769592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3774592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3779592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3784592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3789592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3794592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3799592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3804592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3809592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3814592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3819592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3824592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3829592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3834592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3839592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3844592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3849592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3854592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3859592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3864592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3869592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3874592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3879592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3884592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3889592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3894592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3899592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3904592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3909592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3914592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3919592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3924592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3929592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3934592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3939592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3944592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3949592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3954592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3959592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3964592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3969592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3974592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3979592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3984592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3989592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3994592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (3999592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4004592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4009592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4014592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4019592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4024592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4029592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4034592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4039592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4044592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4049592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4054592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4059592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4064592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4069592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4074592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4079592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4084592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4089592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4094592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4099592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4104592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4109592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4114592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4119592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4124592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4129592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4134592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4139592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4144592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4149592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4154592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4159592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4164592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4169592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4174592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4179592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4184592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4189592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4194592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4199592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4204592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4209592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4214592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4219592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4224592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4229592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4234592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4239592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4244592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4249592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4254592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4259592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4264592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4269592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4274592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4279592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4284592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4289592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4294592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4299592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4304592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4309592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4314592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4319592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4324592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4329592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4334592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4339592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4344592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4349592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4354592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4359592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4364592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4369592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4374592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4379592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4384592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4389592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4394592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4399592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4404592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4409592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4414592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4419592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4424592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4429592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4434592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4439592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4444592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4449592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4454592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4459592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4464592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4469592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4474592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4479592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4484592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4489592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4494592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4499592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4504592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4509592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4514592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4519592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4524592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4529592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4534592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4539592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4544592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4549592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4554592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4559592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4564592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4569592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4574592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4579592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4584592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4589592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4594592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4599592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4604592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4609592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4614592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4619592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4624592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4629592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4634592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4639592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4644592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4649592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4654592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4659592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4664592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4669592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4674592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4679592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4684592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4689592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4694592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4699592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4704592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4709592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4714592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4719592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4724592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4729592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4734592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4739592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4744592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4749592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4754592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4759592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4764592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4769592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4774592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4779592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4784592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4789592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4794592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4799592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4804592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4809592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4814592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4819592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4824592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4829592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4834592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4839592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4844592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4849592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4854592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4859592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4864592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4869592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4874592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4879592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4884592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4889592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4894592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4899592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4904592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4909592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4914592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4919592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4924592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4929592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4934592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4939592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4944592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4949592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4954592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4959592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4964592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4969592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4974592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4979592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4984592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4989592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4994592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (4999592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5004592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5009592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5014592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5019592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5024592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5029592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5034592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5039592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5044592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5049592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5054592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5059592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5064592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5069592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5074592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5079592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5084592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5089592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5094592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5099592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5104592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5109592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5114592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5119592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5124592) mqtt5_example: Published temperature 24.70 *C[0m
+[0;32mI (5129592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5134592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5139592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5144592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5149592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5154592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5159592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5164592) mqtt5_example: Published temperature 24.80 *C[0m
+[0;32mI (5169592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5174592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5179592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5184592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5189592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5194592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5199592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5204592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5209592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5214592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5219592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5224592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5229592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5234592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5239592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5244592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5249592) mqtt5_example: Published temperature 24.90 *C[0m
+[0;32mI (5254592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5259592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5264592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5269592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5274592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5279592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5284592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5289592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5294592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5299592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5304592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5309592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5314592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5319592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5324592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5329592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5334592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5339592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5344592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5349592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5354592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5359592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5364592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5369592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5374592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5379592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5384152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (5384592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5385792) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5385792) mqtt5_example: 1[0m
+[0;32mI (5385792) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5385792) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5386812) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5386812) mqtt5_example: 1[0m
+[0;32mI (5386812) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5386812) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5387222) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (5387222) mqtt5_example: Mode 2[0m
+[0;32mI (5387222) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (5388042) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5388042) mqtt5_example: Mode 3[0m
+[0;32mI (5388042) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5388452) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5388452) mqtt5_example: 1[0m
+[0;32mI (5388452) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5388452) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5388642) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (5388642) mqtt5_example: Mode 2[0m
+[0;32mI (5388642) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (5388902) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5388902) mqtt5_example: Mode 3[0m
+[0;32mI (5388902) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5389152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (5389162) mqtt5_example: Mode 2[0m
+[0;32mI (5389162) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (5389412) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5389422) mqtt5_example: Mode 3[0m
+[0;32mI (5389422) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5389422) mqtt5_example: 1[0m
+[0;32mI (5389422) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5389482) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5389482) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5389592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5389672) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (5389672) mqtt5_example: Mode 2[0m
+[0;32mI (5389672) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (5389972) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5389972) mqtt5_example: 1[0m
+[0;32mI (5389982) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5389982) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5390182) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5390182) mqtt5_example: Mode 3[0m
+[0;32mI (5390182) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5390702) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5390702) mqtt5_example: Mode 3[0m
+[0;32mI (5390702) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5390712) mqtt5_example: Mode 3[0m
+[0;32mI (5390712) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5390762) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5390912) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5390912) mqtt5_example: Mode 3[0m
+[0;32mI (5390912) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391152) mqtt5_example: Mode 3[0m
+[0;32mI (5391152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391162) mqtt5_example: Mode 3[0m
+[0;32mI (5391162) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391212) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391522) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391522) mqtt5_example: Mode 3[0m
+[0;32mI (5391522) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391532) mqtt5_example: Mode 3[0m
+[0;32mI (5391532) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391582) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391732) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391732) mqtt5_example: Mode 3[0m
+[0;32mI (5391732) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391732) mqtt5_example: Mode 3[0m
+[0;32mI (5391742) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5391742) mqtt5_example: Mode 3[0m
+[0;32mI (5391742) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391802) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5391852) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5392132) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (5392132) mqtt5_example: Mode 3[0m
+[0;32mI (5392132) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (5393572) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (5393572) mqtt5_example: 1[0m
+[0;32mI (5393572) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (5393572) mqtt5_example: FAN MODE 1[0m
+[0;32mI (5394592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5396032) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (5396032) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (5396032) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (5396842) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (5396842) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (5396842) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (5399592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5404592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5409592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5414592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5419592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5424592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5429592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5434592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5439592) mqtt5_example: Published temperature 25.00 *C[0m
+[0;32mI (5444592) mqtt5_example: Published temperature 25.00 *C[0m
+=c�B�V땹��� tcp mbox: 6
+[0;32mI (462) wifi_init: tcp tx win: 5760[0m
+[0;32mI (462) wifi_init: tcp rx win: 5760[0m
+[0;32mI (462) wifi_init: tcp mss: 1440[0m
+[0;32mI (472) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (472) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (562) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (572) wifi:mode : sta (f0:f5:bd:fb:0f:80)[0m
+[0;32mI (582) wifi:enable tsf[0m
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (612) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (612) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (712) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (722) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (812) wifi:connected with Son Tra, aid = 10, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (812) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (812) wifi:pm start, type: 1[0m
+
+[0;32mI (822) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (822) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (922) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (922) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2032) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (2032) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (2042) mqtt5_example: Other event id:7[0m
+[0;32mI (2052) main_task: Returned from app_main()[0m
+[0;32mI (2452) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (5232) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5242) mqtt5_example: sent subscribe successful, msg_id=22718[0m
+[0;32mI (5242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (5642) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=22718, return code=0x00 [0m
+[0;32mI (6052) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=23225, return code=0x00 [0m
+[0;32mI (6052) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=10105, return code=0x00 [0m
+[0;32mI (6062) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=41225, return code=0x00 [0m
+[0;32mI (7692) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (8922) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (8922) mqtt5_example: 1[0m
+[0;32mI (8922) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (8922) mqtt5_example: FAN MODE 1[0m
+[0;32mI (10242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (10352) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (10352) mqtt5_example: Mode 2[0m
+[0;32mI (10352) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (11992) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (11992) mqtt5_example: Mode 3[0m
+[0;32mI (11992) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (13022) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (13022) mqtt5_example: Turning Off FAN[0m
+[0;32mI (13022) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (13022) mqtt5_example: FAN OFF[0m
+[0;32mI (14452) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (15242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (18132) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (18142) mqtt5_example: 1[0m
+[0;32mI (18142) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (18142) mqtt5_example: FAN MODE 1[0m
+[0;32mI (19052) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (19052) mqtt5_example: Mode 2[0m
+[0;32mI (19052) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (20242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (21272) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (21272) mqtt5_example: Mode 3[0m
+[0;32mI (21272) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (23152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (23152) mqtt5_example: 1[0m
+[0;32mI (23152) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (23152) mqtt5_example: FAN MODE 1[0m
+[0;32mI (24942) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (24942) mqtt5_example: Mode 2[0m
+[0;32mI (24942) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (25242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (25812) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (25812) mqtt5_example: Mode 3[0m
+[0;32mI (25812) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (28892) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (28892) mqtt5_example: 1[0m
+[0;32mI (28892) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (28892) mqtt5_example: FAN MODE 1[0m
+[0;32mI (29842) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (29842) mqtt5_example: Mode 2[0m
+[0;32mI (29842) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (30242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (32372) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (32372) mqtt5_example: Mode 3[0m
+[0;32mI (32372) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (34042) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (34042) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (34042) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (35242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (35282) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (35282) mqtt5_example: Turning Off FAN[0m
+[0;32mI (35282) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (35282) mqtt5_example: FAN OFF[0m
+[0;32mI (36912) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (37722) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (37722) mqtt5_example: Turning Off FAN[0m
+[0;32mI (37722) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (37732) mqtt5_example: FAN OFF[0m
+[0;32mI (38852) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (39462) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (39472) mqtt5_example: 1[0m
+[0;32mI (39472) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (39472) mqtt5_example: FAN MODE 1[0m
+[0;32mI (40242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (40242) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (40242) mqtt5_example: Turning Off FAN[0m
+[0;32mI (40242) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (40252) mqtt5_example: FAN OFF[0m
+[0;32mI (41312) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (42122) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (42122) mqtt5_example: 1[0m
+[0;32mI (42132) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (42132) mqtt5_example: FAN MODE 1[0m
+[0;32mI (43152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (43152) mqtt5_example: Mode 2[0m
+[0;32mI (43152) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (43982) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (43982) mqtt5_example: Mode 3[0m
+[0;32mI (43982) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (44892) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (44892) mqtt5_example: 1[0m
+[0;32mI (44892) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (44892) mqtt5_example: FAN MODE 1[0m
+[0;32mI (45242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (45612) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (45612) mqtt5_example: Mode 2[0m
+[0;32mI (45612) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (46432) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (46432) mqtt5_example: Mode 3[0m
+[0;32mI (46432) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (47262) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (47262) mqtt5_example: 1[0m
+[0;32mI (47262) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (47262) mqtt5_example: FAN MODE 1[0m
+[0;32mI (48072) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (48072) mqtt5_example: Turning Off FAN[0m
+[0;32mI (48072) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (48072) mqtt5_example: FAN OFF[0m
+[0;32mI (50242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (55242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (60242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (65242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (70242) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (75242) mqtt5_example: Published temperature 25.50 *C[0m
+NB-�409600 us
+[0;32mI (872) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1762) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (1762) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (1772) mqtt5_example: Other event id:7[0m
+[0;32mI (1782) main_task: Returned from app_main()[0m
+[0;32mI (2012) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4872) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (4882) mqtt5_example: sent subscribe successful, msg_id=15788[0m
+[0;32mI (4882) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (5282) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=15788, return code=0x00 [0m

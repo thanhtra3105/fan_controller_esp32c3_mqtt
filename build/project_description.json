@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "fan_idf",
-    "project_version":    "c44f4ca-dirty",
+    "project_version":    "f6de718-dirty",
     "project_path":       "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf",
     "idf_path":           "C:/Users/ADMIN/esp/v5.5.1/esp-idf",
     "build_dir":          "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build",
@@ -906,7 +906,7 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "mqtt", "nvs_flash", "esp_netif", "esp_wifi", "esp_driver_gpio", "esp_adc", "protocol_examples_common" ],
+            "priv_reqs": [ "mqtt", "nvs_flash", "esp_netif", "esp_wifi", "esp_driver_gpio", "esp_adc", "esp_driver_gptimer", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "file": "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build/esp-idf/main/libmain.a",
@@ -2443,7 +2443,7 @@
             "dir": "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/main",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "mqtt", "nvs_flash", "esp_netif", "esp_wifi", "esp_driver_gpio", "esp_adc", "protocol_examples_common" ],
+            "priv_reqs": [ "mqtt", "nvs_flash", "esp_netif", "esp_wifi", "esp_driver_gpio", "esp_adc", "esp_driver_gptimer", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "include_dirs": [ "." ]

@@ -1,0 +1,21 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM14 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM14'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM14 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM14 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x40385bd4: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m483[0m
+[0m--- 0x40385b92: [0;33mesp_vApplicationTickHook[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'E:\\THANHTRA\\KI_7\\MCU\\Project_CK\\fan_idf\\build\\fan_idf.elf', '-ex', 'add-symbol-file E:\\THANHTRA\\KI_7\\MCU\\Project_CK\\fan_idf\\build\\bootloader\\bootloader.elf', '-ex', 'target remote | "C:\\Users\\ADMIN\\.espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\ADMIN\\AppData\\Local\\Temp\\tmpa1aup05y"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "E:THANHTRAKI_7MCUProject_CKfan_idfbuildbootloaderbootloader.elf"\r\nE:THANHTRAKI_7MCUProject_CKfan_idfbuildbootloaderbootloader.elf: No such file or directory.\r\nerror starting child process \'C:\\Users\\ADMIN\\.espressif\\python_env\\idf5.5_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\ADMIN\\AppData\\Local\\Temp\\tmpa1aup05y\': CreateProcess: No such file or directory\r\nNo stack.\r\n'
+
+[0m
+[0m--- 0x40385cba: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/ADMIN/esp/v5.5.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

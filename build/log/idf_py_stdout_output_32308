@@ -1,0 +1,479 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 17 2025 20:58:04[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=1f9a4h (129444) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=0002f9cc vaddr=3fc94600 size=0064ch (  1612) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=b6c04h (748548) map[0m
+[0;32mI (233) esp_image: segment 3: paddr=000e6c2c vaddr=3fc94c4c size=02790h ( 10128) load[0m
+[0;32mI (235) esp_image: segment 4: paddr=000e93c4 vaddr=40380000 size=14554h ( 83284) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000fd920 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (258) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (258) boot: Disabling RNG early entropy source...[0m
+[0;32mI (269) cpu_start: Unicore app[0m
+[0;32mI (278) cpu_start: Pro cpu start user code[0m
+[0;32mI (278) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (278) app_init: Application information:[0m
+[0;32mI (278) app_init: Project name:     fan_idf[0m
+[0;32mI (282) app_init: App version:      f6de718-dirty[0m
+[0;32mI (286) app_init: Compile time:     Dec 20 2025 21:28:01[0m
+[0;32mI (291) app_init: ELF file SHA256:  4f419300a...[0m
+[0;32mI (295) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (299) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (303) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (307) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (311) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (317) heap_init: At 3FC9BD00 len 00024300 (144 KiB): RAM[0m
+[0;32mI (322) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (328) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (334) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (341) spi_flash: detected chip: generic[0m
+[0;32mI (343) spi_flash: flash io: dio[0m
+[0;33mW (346) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (359) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (372) main_task: Started on CPU0[0m
+[0;32mI (382) main_task: Calling app_main()[0m
+[0;32mI (392) pp: pp rom version: 9387209[0m
+[0;32mI (392) net80211: net80211 rom version: 9387209[0m
+[0;32mI (402) wifi:wifi driver task: 3fca48d4, prio:23, stack:6656, core=0[0m
+[0;32mI (402) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (402) wifi:wifi certification version: v7.0[0m
+[0;32mI (402) wifi:config NVS flash: enabled[0m
+[0;32mI (412) wifi:config nano formatting: disabled[0m
+[0;32mI (412) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (422) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (422) wifi:Init management short buffer num: 32[0m
+[0;32mI (422) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (432) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (432) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (442) wifi:Init static rx buffer num: 10[0m
+[0;32mI (442) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (452) wifi_init: accept mbox: 6[0m
+[0;32mI (452) wifi_init: tcpip mbox: 32[0m
+[0;32mI (452) wifi_init: udp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp tx win: 5760[0m
+[0;32mI (462) wifi_init: tcp rx win: 5760[0m
+[0;32mI (462) wifi_init: tcp mss: 1440[0m
+[0;32mI (472) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (472) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (532) wifi:mode : sta (f0:f5:bd:fb:0f:80)[0m
+[0;32mI (532) wifi:enable tsf[0m
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (542) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (542) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (552) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (562) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (602) wifi:connected with Son Tra, aid = 6, channel 11, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (602) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (602) wifi:pm start, type: 1[0m
+
+[0;32mI (602) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (612) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (682) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (682) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1642) esp_netif_handlers: sta ip: 192.168.87.44, mask: 255.255.255.0, gw: 192.168.87.165[0m
+Wifi got IP...
+
+[0;32mI (1642) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (1652) mqtt5_example: Other event id:7[0m
+[0;32mI (1662) main_task: Returned from app_main()[0m
+[0;32mI (1812) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4392) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (4402) mqtt5_example: sent subscribe successful, msg_id=42567[0m
+[0;32mI (4402) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (4402) mqtt5_example: Published humidity 0.00 %[0m
+[0;32mI (4682) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=42567, return code=0x00 [0m
+[0;32mI (5092) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=45713, return code=0x00 [0m
+[0;32mI (5092) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=52204, return code=0x00 [0m
+[0;32mI (9402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (9402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (14402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (14402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (19402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (19402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (24402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (24402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (29402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (29402) mqtt5_example: Published humidity 91.40 %[0m
+[0;32mI (34402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (34402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (39402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (39402) mqtt5_example: Published humidity 91.40 %[0m
+[0;32mI (44402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (44402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (49402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (49402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (54402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (54402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (59402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (59402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (64402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (64402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (69402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (69402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (74402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (74402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (79402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (79402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (84402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (84402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (89402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (89402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (94402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (94402) mqtt5_example: Published humidity 90.90 %[0m
+[0;32mI (99402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (99402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (104402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (104402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (109402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (109402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (114402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (114402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (119402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (119402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (124402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (124402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (124682) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (128572) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (128572) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (128572) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (129402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (129402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (129492) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (129492) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (129492) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (130412) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (130412) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (130412) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (131232) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (131232) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (131232) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (132052) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (132052) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (132052) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (133092) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (133092) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (133092) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (134102) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (134102) mqtt5_example: 1[0m
+[0;32mI (134102) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (134102) mqtt5_example: FAN MODE 1[0m
+[0;32mI (134402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (134402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (135432) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (135432) mqtt5_example: Mode 2[0m
+[0;32mI (135432) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (136762) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (136762) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (136762) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (138212) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (138212) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (138212) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (139402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (139402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (139422) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (139422) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (139422) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (140552) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (140552) mqtt5_example: 1[0m
+[0;32mI (140552) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (140552) mqtt5_example: FAN MODE 1[0m
+[0;32mI (144402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (144402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (149402) mqtt5_example: Published temperature 25.50 *C[0m
+[0;32mI (149402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (154402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (154402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (159402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (159402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (164402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (164402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (169402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (169402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (174402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (174402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (179402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (179402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (184402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (184402) mqtt5_example: Published humidity 90.90 %[0m
+[0;32mI (189402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (189402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (194402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (194402) mqtt5_example: Published humidity 90.70 %[0m
+[0;32mI (197612) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (197612) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (197612) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (198632) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (198632) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (198632) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (199402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (199402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (199662) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (199662) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (199662) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (201102) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (201102) mqtt5_example: Turning Off FAN[0m
+[0;32mI (201102) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=0
+[0;32mI (201102) mqtt5_example: Fan OFF[0m
+[0;32mI (201112) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (201162) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (201912) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (201912) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (201912) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (202112) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (203542) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (203542) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (203542) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (204362) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (204362) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (204362) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (204402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (204402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (204892) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (204892) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (204892) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (205592) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (205592) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (205592) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (206002) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (206002) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (206002) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (206412) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (206412) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (206412) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (206442) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (206442) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (206442) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (206442) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (206472) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (206522) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (206822) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (206822) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (206822) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (207072) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (207072) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (207072) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (207072) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (207082) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (207132) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (207232) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (207242) mqtt5_example: Turning OCSILLATION OFF[0m
+[0;32mI (207242) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (209402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (209402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (214402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (214402) mqtt5_example: Published humidity 90.70 %[0m
+[0;32mI (219402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (219402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (224402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (224402) mqtt5_example: Published humidity 90.50 %[0m
+[0;32mI (229402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (229402) mqtt5_example: Published humidity 90.50 %[0m
+[0;32mI (234402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (234402) mqtt5_example: Published humidity 90.50 %[0m
+[0;32mI (239402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (239402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (244402) mqtt5_example: Published temperature 25.40 *C[0m
+[0;32mI (244402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (249402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (249402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (254402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (254402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (259402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (259402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (264402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (264402) mqtt5_example: Published humidity 90.70 %[0m
+[0;32mI (269402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (269402) mqtt5_example: Published humidity 90.60 %[0m
+[0;32mI (274402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (274402) mqtt5_example: Published humidity 90.90 %[0m
+[0;32mI (279402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (279402) mqtt5_example: Published humidity 90.90 %[0m
+[0;32mI (284402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (284402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (289402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (289402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (294402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (294402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (299402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (299402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (304402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (304402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (309402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (309402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (314402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (314402) mqtt5_example: Published humidity 90.80 %[0m
+[0;32mI (319402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (319402) mqtt5_example: Published humidity 90.70 %[0m
+[0;32mI (324402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (324402) mqtt5_example: Published humidity 90.90 %[0m
+[0;32mI (329402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (329402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (334402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (334402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (339402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (339402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (344402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (344402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (349402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (349402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (354402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (354402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (359402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (359402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (364402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (364402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (369402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (369402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (374402) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (374402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (379402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (379402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (384402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (384402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (389402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (389402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (394402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (394402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (399402) mqtt5_example: Published temperature 25.20 *C[0m
+[0;32mI (399402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (404402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (404402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (409402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (409402) mqtt5_example: Published humidity 91.40 %[0m
+[0;32mI (414402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (414402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (419402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (419402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (424402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (424402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (429402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (429402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (434402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (434402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (439402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (439402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (444402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (444402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (449402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (449402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (454402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (454402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (459402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (459402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (464402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (464402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (469402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (469402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (474402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (474402) mqtt5_example: Published humidity 91.30 %[0m
+[0;32mI (479402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (479402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (484402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (484402) mqtt5_example: Published humidity 91.20 %[0m
+[0;32mI (489402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (489402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (494402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (494402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (499402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (499402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (504402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (504402) mqtt5_example: Published humidity 91.10 %[0m
+[0;32mI (509402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (509402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (514402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (514402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (519402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (519402) mqtt5_example: Published humidity 91.00 %[0m
+[0;32mI (524402) mqtt5_example: Published temperature 25.30 *C[0m
+[0;32mI (524402) mqtt5_example: Published humidity 91.00 %[0m
