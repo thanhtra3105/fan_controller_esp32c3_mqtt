@@ -85,33 +85,33 @@ WiFi Password
 
 ### 3. Configure MQTT
 
-Enter HiveMQ Cloud MQTT Broker URI
+- Enter HiveMQ Cloud MQTT Broker URI
 
-MQTT v5 (CONFIG_MQTT_PROTOCOL_5) is enabled by default in sdkconfig.defaults
+- MQTT v5 (CONFIG_MQTT_PROTOCOL_5) is enabled by default in sdkconfig.defaults
 
-Note:
+- Note:
 If MQTT URI is set to FROM_STDIN, the broker address will be read from stdin at startup (mainly for testing purposes).
 
-Build and Flash
-idf.py build
-idf.py -p PORT flash monitor
+- Build and Flash
+  idf.py build
+  idf.py -p PORT flash monitor
 
 
 Replace PORT with your board's COM port (e.g., COM3 or /dev/ttyUSB0)
 
-Exit the serial monitor using Ctrl + ]
+- Exit the serial monitor using Ctrl + ]
 
-Sample Output (Serial Monitor)
+- Sample Output (Serial Monitor)
 
-After a successful run, you will see:
+- After a successful run, you will see:
 
-ESP32 connected to WiFi
+  -- ESP32 connected to WiFi
 
-Connected to HiveMQ Cloud MQTT Broker
+  -- Connected to HiveMQ Cloud MQTT Broker
 
-Commands received from Flutter App
+  -- Commands received from Flutter App
 
-Status and temperature data published to MQTT Broker
+  -- Status and temperature data published to MQTT Broker
 
 Example:
 
@@ -122,7 +122,7 @@ TOPIC=/topic/qos1
 DATA=data_3
 MQTT_EVENT_DISCONNECTED
 
-Applications
+## Applications
 
 Remote control of 220V oscillating fan
 
