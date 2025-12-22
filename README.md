@@ -42,7 +42,6 @@ The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT versio
 ## Technology Stack
 - ESP-IDF
 - ESP-MQTT Library
-- MQTT v5
 - WiFi
 - HiveMQ Cloud MQTT Broker
 - Flutter (control application)
