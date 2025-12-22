@@ -92,14 +92,10 @@ WiFi Password
 - Note:
 If MQTT URI is set to FROM_STDIN, the broker address will be read from stdin at startup (mainly for testing purposes).
 
-- Build and Flash
-  idf.py build
-  idf.py -p PORT flash monitor
+- Build and Flash with **idf.py build** and **idf.py -p PORT flash monitor**
 
 
 Replace PORT with your board's COM port (e.g., COM3 or /dev/ttyUSB0)
-
-- Exit the serial monitor using Ctrl + ]
 
 - Sample Output (Serial Monitor)
 
