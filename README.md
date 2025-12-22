@@ -1,5 +1,3 @@
-<img width="1111" height="507" alt="image" src="https://github.com/user-attachments/assets/e8a83151-e4b0-4e6c-af1a-b9f9f43a9a36" /># ESP32-C3 Fan Controller using MQTT
-
 ## Introduction
 The **ESP32-C3 Fan Controller MQTT** project is an IoT application using **ESP32-C3** microcontroller to remotely control a fan via **MQTT protocol**.  
 The system allows ESP32 to connect to WiFi and communicate with **HiveMQ Cloud MQTT Broker** to receive control commands and send status data.
