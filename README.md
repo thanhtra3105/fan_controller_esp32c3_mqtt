@@ -32,7 +32,6 @@ The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT versio
 - **DHT22** – Temperature sensor
 - **Buzzer** – Notification alerts
 - **LED** – Status indicator
-- **DC-DC Buck Converter** – Stable power supply for ESP32
 - **220V AC Fan** – Oscillating fan
 
 > ⚠️ **Safety Note:**  
@@ -45,7 +44,7 @@ The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT versio
 - ESP-MQTT Library
 - MQTT v5
 - WiFi
-- **HiveMQ Cloud MQTT Broker**
+- HiveMQ Cloud MQTT Broker
 - Flutter (control application)
 
 ---
