@@ -1,5 +1,5 @@
 ## Introduction
-The **ESP32-C3 Fan Controller MQTT** project is an IoT application using **ESP32-C3** microcontroller to remotely control a fan via **MQTT protocol**.  
+The **Remote Fan Control Circuit** project is an IoT application using **ESP32-C3** microcontroller to remotely control a fan via **MQTT protocol**.  
 The system allows ESP32 to connect to WiFi and communicate with **HiveMQ Cloud MQTT Broker** to receive control commands and send status data.
 
 The fan is controlled via a **Flutter application**, enabling users to send commands and receive data from ESP32, which is then displayed on the app interface.
@@ -10,7 +10,7 @@ The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT versio
 
 ## Main Features
 - WiFi and Internet connection
-- Connect to **HiveMQ Cloud MQTT Broker (MQTT v5)**
+- Connect to HiveMQ Cloud MQTT Broker (MQTT v5)
 - Remotely control a 220V oscillating fan
 - Receive control commands from Flutter App
 - Send status and temperature data to MQTT Broker
