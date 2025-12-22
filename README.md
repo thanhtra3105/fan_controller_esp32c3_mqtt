@@ -60,12 +60,12 @@ The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT versio
   - Publishes status and temperature data
   - Controls relay, buzzer, and LED
 
-> ** <img width="1784" height="1011" alt="image" src="https://github.com/user-attachments/assets/a1c38ef6-8729-4317-99b1-2807826ab422" /> **
+>  <img width="1784" height="1011" alt="image" src="https://github.com/user-attachments/assets/a1c38ef6-8729-4317-99b1-2807826ab422" /> 
 
 ---
 
 ## GPIO Pin Mapping
-> ** <img width="1111" height="507" alt="image" src="https://github.com/user-attachments/assets/72bb29f5-9f51-4c9f-b4d7-685ada509f1a" /> **  
+>  <img width="1111" height="507" alt="image" src="https://github.com/user-attachments/assets/72bb29f5-9f51-4c9f-b4d7-685ada509f1a" /> 
 
 ## Project Configuration
 
