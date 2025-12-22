@@ -1,0 +1,498 @@
+Command: C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM14 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\fan_idf.elf E:\THANHTRA\KI_7\MCU\Project_CK\fan_idf\build\bootloader\bootloader.elf --force-color -m 'C:\Users\ADMIN\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\ADMIN\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM14'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 17 2025 20:58:04[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=1fab8h (129720) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=0002fae0 vaddr=3fc94e00 size=00538h (  1336) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=b6c88h (748680) map[0m
+[0;32mI (233) esp_image: segment 3: paddr=000e6cb0 vaddr=3fc95338 size=028a4h ( 10404) load[0m
+[0;32mI (235) esp_image: segment 4: paddr=000e955c vaddr=40380000 size=14c20h ( 85024) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000fe184 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (259) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (259) boot: Disabling RNG early entropy source...[0m
+[0;32mI (270) cpu_start: Unicore app[0m
+[0;32mI (278) cpu_start: Pro cpu start user code[0m
+[0;32mI (278) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (278) app_init: Application information:[0m
+[0;32mI (278) app_init: Project name:     fan_idf[0m
+[0;32mI (282) app_init: App version:      583e837-dirty[0m
+[0;32mI (287) app_init: Compile time:     Dec 21 2025 22:05:05[0m
+[0;32mI (292) app_init: ELF file SHA256:  496671d3c...[0m
+[0;32mI (296) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (300) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (304) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (308) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (311) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (318) heap_init: At 3FC9C620 len 000239E0 (142 KiB): RAM[0m
+[0;32mI (323) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (329) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (335) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (341) spi_flash: detected chip: generic[0m
+[0;32mI (344) spi_flash: flash io: dio[0m
+[0;33mW (347) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (360) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (365) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (372) main_task: Started on CPU0[0m
+[0;32mI (382) main_task: Calling app_main()[0m
+[0;32mI (392) pp: pp rom version: 9387209[0m
+[0;32mI (392) net80211: net80211 rom version: 9387209[0m
+[0;32mI (402) wifi:wifi driver task: 3fca5af8, prio:23, stack:6656, core=0[0m
+[0;32mI (402) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (402) wifi:wifi certification version: v7.0[0m
+[0;32mI (402) wifi:config NVS flash: enabled[0m
+[0;32mI (412) wifi:config nano formatting: disabled[0m
+[0;32mI (412) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (422) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (422) wifi:Init management short buffer num: 32[0m
+[0;32mI (422) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (432) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (432) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (442) wifi:Init static rx buffer num: 10[0m
+[0;32mI (442) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (452) wifi_init: accept mbox: 6[0m
+[0;32mI (452) wifi_init: tcpip mbox: 32[0m
+[0;32mI (452) wifi_init: udp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp tx win: 5760[0m
+[0;32mI (462) wifi_init: tcp rx win: 5760[0m
+[0;32mI (462) wifi_init: tcp mss: 1440[0m
+[0;32mI (472) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (472) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (522) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (532) wifi:mode : sta (f0:f5:bd:fb:0f:80)[0m
+[0;32mI (542) wifi:enable tsf[0m
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (542) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (552) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1212) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1222) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (1532) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (2182) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2222) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (12222) wifi:state: run -> init (0xcc00)[0m
+[0;32mI (12232) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+WiFi lost connection
+Retrying to Connect...
+[0;32mI (12442) wifi:new:<1,0>, old:<6,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12442) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (12492) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (12502) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (12572) wifi:connected with Son Tra, aid = 18, channel 1, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (12572) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (12582) wifi:pm start, type: 1[0m
+
+[0;32mI (12582) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (12592) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (12642) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (12642) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (13652) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (13652) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud[0m
+[0;32mI (13662) mqtt5_example: Other event id:7[0m
+[0;32mI (13662) main_task: Returned from app_main()[0m
+[0;32mI (14082) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (14692) wifi:<ba-add>idx:1 (ifx:0, ea:af:d6:c7:ed:e6), tid:4, ssn:0, winSize:64[0m
+[0;32mI (16962) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (16962) mqtt5_example: sent subscribe successful, msg_id=36963[0m
+[0;32mI (16962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (17372) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=36963, return code=0x01 [0m
+[0;32mI (17812) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=44151, return code=0x01 [0m
+[0;32mI (17812) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=25854, return code=0x01 [0m
+[0;32mI (17822) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=45867, return code=0x01 [0m
+[0;32mI (21962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (26962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (31962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (36962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (41962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (46962) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (1712) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (1712) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud[0m
+[0;32mI (1722) mqtt5_example: Other event id:7[0m
+[0;32mI (1732) main_task: Returned from app_main()[0m
+[0;32mI (2082) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2392) wifi:<ba-add>idx:1 (ifx:0, ea:af:d6:c7:ed:e6), tid:4, ssn:0, winSize:64[0m
+[0;32mI (6222) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6232) mqtt5_example: sent subscribe successful, msg_id=14733[0m
+[0;32mI (6232) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (6592) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=14733, return code=0x01 [0m
+[0;32mI (7112) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=15011, return code=0x01 [0m
+[0;32mI (7112) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=21178, return code=0x01 [0m
+[0;32mI (7612) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=16127, return code=0x01 [0m
+[0;32mI (8232) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (9962) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (9962) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (9972) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (11232) mqtt5_example: Published temperature 27.00 *C[0m
+[0;32mI (11752) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (11752) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (11752) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (12732) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (12732) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (12732) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (13562) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (13562) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (13562) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (14372) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (14372) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (14382) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (15032) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (15032) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (15032) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (16152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (16152) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (16152) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (16232) mqtt5_example: Published temperature 27.00 *C[0m
+[0;32mI (17232) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (17242) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (17242) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (21232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (21272) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (21272) mqtt5_example: Mode 3[0m
+[0;32mI (21272) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (26232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (28512) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (28512) mqtt5_example: Mode 2[0m
+[0;32mI (28512) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (29572) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (29572) mqtt5_example: 1[0m
+[0;32mI (29572) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (30562) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (30562) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (30562) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (31232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (31272) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (31272) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (31272) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (31992) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (31992) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (31992) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (32442) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (32442) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (32442) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (36232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (41232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (46232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (51232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (52302) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (52302) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (52312) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (53692) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (53692) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (53692) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (55742) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=2
+[0;32mI (55742) mqtt5_example: Mode 2[0m
+[0;32mI (55742) mqtt5_example: Received fan mode command: 2[0m
+[0;32mI (56232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (56762) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=3
+[0;32mI (56762) mqtt5_example: Mode 3[0m
+[0;32mI (56772) mqtt5_example: Received fan mode command: 3[0m
+[0;32mI (58402) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/speed
+DATA=1
+[0;32mI (58402) mqtt5_example: 1[0m
+[0;32mI (58402) mqtt5_example: Received fan mode command: 1[0m
+[0;32mI (60042) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (60042) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (60042) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (60862) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (60862) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (60862) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (61232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (66232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (71232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (76232) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (77452) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (77452) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (77452) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (78372) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (78372) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (78372) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (79092) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (79092) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (79092) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (81232) mqtt5_example: Published temperature 27.10 *C[0m
+�%�(432) wifi:Init static rx buffer size: 1600
+[0;32mI (442) wifi:Init static rx buffer num: 10[0m
+[0;32mI (442) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (442) wifi_init: rx ba win: 6[0m
+[0;32mI (452) wifi_init: accept mbox: 6[0m
+[0;32mI (452) wifi_init: tcpip mbox: 32[0m
+[0;32mI (452) wifi_init: udp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp mbox: 6[0m
+[0;32mI (462) wifi_init: tcp tx win: 5760[0m
+[0;32mI (462) wifi_init: tcp rx win: 5760[0m
+[0;32mI (462) wifi_init: tcp mss: 1440[0m
+[0;32mI (472) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (472) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (472) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (482) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (532) wifi:mode : sta (f0:f5:bd:fb:0f:80)[0m
+[0;32mI (532) wifi:enable tsf[0m
+WIFI CONNECTING....
+wifi_init_softap finished. SSID:Son Tra  password:L02012001I (592) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (602) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (612) wifi:state: auth -> init (0x1c0)[0m
+[0;32mI (622) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+WiFi lost connection
+Retrying to Connect...
+[0;32mI (1262) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1262) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1952) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1962) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2052) wifi:connected with Son Tra, aid = 3, channel 6, BW20, bssid = 3a:c8:f1:38:fe:d6[0m
+[0;32mI (2052) wifi:security: WPA3-SAE, phy: bgn, rssi: -37[0m
+[0;32mI (2062) wifi:pm start, type: 1[0m
+
+[0;32mI (2062) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2062) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (2102) wifi:<ba-add>idx:0 (ifx:0, 3a:c8:f1:38:fe:d6), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2112) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3162) esp_netif_handlers: sta ip: 172.20.10.4, mask: 255.255.255.240, gw: 172.20.10.1[0m
+Wifi got IP...
+
+[0;32mI (3162) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud[0m
+[0;32mI (3172) mqtt5_example: Other event id:7[0m
+[0;32mI (3182) main_task: Returned from app_main()[0m
+[0;32mI (10642) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (10652) mqtt5_example: sent subscribe successful, msg_id=32414[0m
+[0;32mI (10652) mqtt5_example: Published temperature 0.00 *C[0m
+[0;32mI (12152) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=32414, return code=0x01 [0m
+[0;32mI (13642) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=31660, return code=0x01 [0m
+[0;32mI (13642) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=30430, return code=0x01 [0m
+[0;32mI (13652) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=5992, return code=0x01 [0m
+[0;32mI (15652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (20652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (20662) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (20662) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (20662) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (23642) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (23642) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (23652) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (23652) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (23652) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (23662) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (23662) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (23722) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (23772) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (25152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (25152) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (25152) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (25652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (28152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (28152) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (28162) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (28162) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (28162) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (28222) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (30652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (31172) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (31172) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (31182) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (34142) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=OFF
+[0;32mI (34142) mqtt5_example: Turning OSCILLATION OFF[0m
+[0;32mI (34142) mqtt5_example: Received fan mode command: 5[0m
+[0;32mI (35642) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (35642) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (35652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (35652) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (38642) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=OFF
+[0;32mI (38642) mqtt5_example: Turning Off FAN[0m
+[0;32mI (38642) mqtt5_example: Received fan mode command: 0[0m
+[0;32mI (38642) mqtt5_example: FAN OFF[0m
+[0;32mI (38652) mqtt5_example: fanOff: 0[0m
+[0;32mI (40152) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/state
+DATA=ON
+[0;32mI (40652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (45652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (50652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (55652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (60652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (65652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (70652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (75652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (80652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (85652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (85662) mqtt5_example: MQTT_EVENT_DATA[0m
+TOPIC=iot/fan/osc
+DATA=ON
+[0;32mI (85662) mqtt5_example: Turning on OCSILLATION[0m
+[0;32mI (85662) mqtt5_example: Received fan mode command: 4[0m
+[0;32mI (90652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (95652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (100652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (105652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (110652) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (1202) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1232) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (1542) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (2202) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2212) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1202) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1222) wifi:Association refused temporarily time 196, comeback time 296 (TUs)[0m
+[0;32mI (1532) wifi:state: assoc -> auth (0xb0)[0m
+[0;32mI (2212) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2212) wifi:state: assoc -> init (0x9a0)[0m
+[0;32mI (2262) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+WiFi lost connection
+Retrying to Connect...
+[0;32mI (2482) wifi:new:<1,0>, old:<6,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2482) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2492) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2532) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2582) wifi:connected with Son Tra, aid = 23, channel 1, BW20, bssid = ea:af:d6:c7:ed:e6[0m
+[0;32mI (2582) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (2592) wifi:pm start, type: 1[0m
+
+[0;32mI (2592) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2592) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+WiFi CONNECTED
+[0;32mI (2682) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2682) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3692) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (3692) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud[0m
+[0;32mI (3702) mqtt5_example: Other event id:7[0m
+[0;32mI (3712) main_task: Returned from app_main()[0m
+[0;32mI (4122) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:4, winSize:64[0m
+[0;32mI (4422) wifi:<ba-add>idx:1 (ifx:0, ea:af:d6:c7:ed:e6), tid:4, ssn:0, winSize:64[0m
+[0;32mI (2392) esp_netif_handlers: sta ip: 10.190.49.44, mask: 255.255.255.0, gw: 10.190.49.88[0m
+Wifi got IP...
+
+[0;32mI (2392) mqtt5_example: Wi-Fi connected, starting MQTT client to mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud[0m
+[0;32mI (2402) mqtt5_example: Other event id:7[0m
+[0;32mI (2412) main_task: Returned from app_main()[0m
+[0;32mI (2522) wifi:<ba-add>idx:0 (ifx:0, ea:af:d6:c7:ed:e6), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2992) wifi:<ba-add>idx:1 (ifx:0, ea:af:d6:c7:ed:e6), tid:4, ssn:0, winSize:64[0m
+[0;32mI (5392) mqtt5_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (5402) mqtt5_example: sent subscribe successful, msg_id=36211[0m
+[0;32mI (5402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (5872) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=36211, return code=0x01 [0m
+[0;32mI (6382) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=21541, return code=0x01 [0m
+[0;32mI (6382) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=63503, return code=0x01 [0m
+[0;32mI (6382) mqtt5_example: MQTT_EVENT_SUBSCRIBED, msg_id=62385, return code=0x01 [0m
+[0;32mI (10402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (15402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (20402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (25402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (30402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (35402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (40402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (45402) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (50402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (55402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (60402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (65402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (70402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (75402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (80402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (85402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (90402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (95402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (100402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (105402) mqtt5_example: Published temperature 27.10 *C[0m
+[0;32mI (110402) mqtt5_example: Published temperature 27.20 *C[0m
+[0;32mI (115402) mqtt5_example: Published temperature 27.40 *C[0m
+[0;32mI (120402) mqtt5_example: Published temperature 27.60 *C[0m
+[0;32mI (125402) mqtt5_example: Published temperature 27.80 *C[0m

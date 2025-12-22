@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "fan_idf",
-    "project_version":    "f6de718-dirty",
+    "project_version":    "583e837-dirty",
     "project_path":       "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf",
     "idf_path":           "C:/Users/ADMIN/esp/v5.5.1/esp-idf",
     "build_dir":          "E:/THANHTRA/KI_7/MCU/Project_CK/fan_idf/build",

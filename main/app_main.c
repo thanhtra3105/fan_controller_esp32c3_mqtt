@@ -34,6 +34,7 @@
 #define LED_OFF_PIN GPIO_NUM_3
 
 bool running = false;
+volatile bool fanOff = false;
 typedef enum
 {
     FAN_MODE_OFF = 0,
@@ -53,7 +54,7 @@ adc_oneshot_unit_handle_t adc1_handle;
 
 /* HiveMQ Cloud configuration - EDIT these before flashing */
 /* Use mqtts:// scheme to enable TLS */
-static const char *HIVEMQ_URI = "mqtt://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud:8883";
+static const char *HIVEMQ_URI = "mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud"; 
 static const char *HIVEMQ_USERNAME = "lethanhtra";
 static const char *HIVEMQ_PASSWORD = "Thanhtra2004";
 
@@ -101,7 +102,6 @@ static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_b
 
 void wifi_connection()
 {
-    //                          s1.4
     // 2 - Wi-Fi Configuration Phase
     esp_netif_init();
     esp_event_loop_create_default();     // event loop                    s1.2
@@ -136,21 +136,10 @@ void wifi_connection()
     printf("wifi_init_softap finished. SSID:%s  password:%s", ssid, pass);
 }
 
-static void log_error_if_nonzero(const char *message, int error_code)
-{
-    if (error_code != 0)
-    {
-        ESP_LOGE(TAG, "Last error %s: 0x%x", message, error_code);
-    }
-}
 
 void mqtt_publish_task(void *pvParameters)
 {
     char datatoSend[20];
-    // if(esp_mqtt_client_publish(mqttClient, "iot/fan/connect", "connected", 0, 0, 0 == 0))
-    // {
-    //     ESP_LOGI(TAG, "Published mqtt connected");
-    // }
     while (1)
     {
         float temp = 25.0;
@@ -176,10 +165,10 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
-        msg_id = esp_mqtt_client_subscribe(client, "iot/fan/state", 0);
-        esp_mqtt_client_subscribe(client, "iot/fan/speed", 0);
-        esp_mqtt_client_subscribe(client, "iot/fan/osc", 0);
-        esp_mqtt_client_subscribe(client, "iot/fan/alarm", 0);
+        msg_id = esp_mqtt_client_subscribe(client, "iot/fan/state", 1);
+        esp_mqtt_client_subscribe(client, "iot/fan/speed", 1);
+        esp_mqtt_client_subscribe(client, "iot/fan/osc", 1);
+        esp_mqtt_client_subscribe(client, "iot/fan/alarm", 1);
         ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
         xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 6, NULL);
         break;
@@ -306,7 +295,7 @@ static void mqtt_app_start(void)
 {
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker = {
-            .address.uri = "mqtts://afe100349ba44464b15f0bfb86846d85.s1.eu.hivemq.cloud",
+            .address.uri = HIVEMQ_URI,
             .address.port = 8883,
             .verification.certificate = (const char *)isrgrootx1_pem_start,
         },
@@ -339,7 +328,6 @@ void control_task(void *pvParemeters)
             switch (cmd)
             {
             case FAN_MODE_1:
-                ESP_LOGI(TAG, "FAN MODE 1");
                 gpio_set_level(FAN_MODE2_PIN, 1);
                 gpio_set_level(FAN_MODE3_PIN, 1);
                 gpio_set_level(FAN_MODE1_PIN, 0);
@@ -371,13 +359,19 @@ void control_task(void *pvParemeters)
         else
         {
             ESP_LOGI(TAG, "FAN OFF");
+            running = false;
             gpio_set_level(FAN_MODE1_PIN, 1);
             gpio_set_level(FAN_MODE2_PIN, 1);
             gpio_set_level(FAN_MODE3_PIN, 1);
             gpio_set_level(FAN_OCSILLATION_PIN, 1);
             gpio_set_level(LED_OFF_PIN, 0); // led off ON
             gpio_set_level(LED_ON_PIN, 1);  // led on OFF
-            running = false;
+            ESP_LOGI(TAG, "fanOff: %d", fanOff);
+            if(fanOff)
+            {
+                esp_mqtt_client_publish(mqttClient, "iot/fan/off", "true", 0, 1, 0);
+                fanOff = false;
+            }
         }
 
         vTaskDelay(pdMS_TO_TICKS(50));
@@ -399,8 +393,9 @@ void temp_task(void *pv)
     }
 }
 
-void fan_off_callback(TimerHandle_t xTimer)
+void fan_alarm_callback(TimerHandle_t xTimer)
 {
+    fanOff = true;
     fan_mode cmd = FAN_MODE_OFF;
     xQueueSendFromISR(control_queue, &cmd, NULL);
 }
@@ -456,5 +451,5 @@ void app_main(void)
     mqtt_app_start();
     xTaskCreate(control_task, "control_task", 4096, NULL, 4, NULL);
     xTaskCreate(temp_task, "temp_task", 4096, NULL, 3, NULL);
-    fan_off_timer = xTimerCreate("fan_off_timer", pdMS_TO_TICKS(1000), pdFALSE, (void *)0, fan_off_callback);
+    fan_off_timer = xTimerCreate("fan_off_timer", pdMS_TO_TICKS(1000), pdFALSE, (void *)0, fan_alarm_callback);
 }
