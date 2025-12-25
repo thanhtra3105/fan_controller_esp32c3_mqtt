@@ -4,7 +4,7 @@ The system allows ESP32 to connect to WiFi and communicate with **HiveMQ Cloud M
 
 The fan is controlled via a **Flutter application**, enabling users to send commands and receive data from ESP32, which is then displayed on the app interface.
 
-The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT version 5**.
+The project is built on **ESP-IDF** using **ESP-MQTT library** and **MQTT**.
 
 ---
 
